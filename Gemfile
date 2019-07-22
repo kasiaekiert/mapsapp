@@ -39,8 +39,14 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'parser', '~> 2.3', '>= 2.3.1.2'
+  gem 'rainbow', '~> 3.0'
   gem 'rspec-rails', '~> 3.8'
+  gem 'rubocop', require: false
+  gem 'reek', '~> 4.7', '>= 4.7.2'
+  gem 'rubocop-performance'
 
+  gem 'rubycritic', require: false
 end
 
 group :development do
