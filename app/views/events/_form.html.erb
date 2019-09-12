@@ -23,12 +23,12 @@
 
   <div class="field">
     <%= form.label :started_at %>
-    <%= form.text_area :started_at %>
+    <%= form.datetime_local_field :started_at %>
   </div>
 
   <div class="field">
     <%= form.label :place %>
-    <%= form.select :place_id, options_from_collection_for_select(Place.all, :id, :name)%>
+    <%= form.select :place_id, options_from_collection_for_select(Place.all, :id, :full_adress)%>
   </div>
 
   <div class="actions">
