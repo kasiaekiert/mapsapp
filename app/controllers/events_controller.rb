@@ -17,7 +17,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(event_params)
+    @event = Event.new(event_params.merge(user_id: current_user.id))
 
     respond_to do |format|
       if @event.save
@@ -57,6 +57,10 @@ class EventsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_places
       @place = Place.all
+    end
+
+    def set_users
+      @user = User.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
