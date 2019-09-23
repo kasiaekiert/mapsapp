@@ -4,22 +4,42 @@
     <title>Mapapp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-      <% if user_signed_in? %>
-        <p> Jesteś zalogowany jako: <%= current_user.email %></p>
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-      <% else %>
-        <p> Jesteś niezalogowany </p>
-      <% end %>
-
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">MapApp</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/events">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/places">Places</a>
+          </li>
+        </ul>
+      </div>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2 my-lg-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-2" type="submit">Search</button>
+      </form>
+    </nav>
+<% if user_signed_in? %> 
+  <p> Loged in as: <%= current_user.email %></p>
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'%>
+<% else %>
+  <p> Unlogged </p>
+<% end %>
     <%= yield %>
   </body>
 </html>
