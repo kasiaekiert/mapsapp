@@ -8,21 +8,18 @@
   </div>
 </div>
 
-<div class=container>
-      <div class="row">
-        <% @places.each do |place| %>
-          <div class="col-md-4">
-            <h2><%= place.name %></h2>
-            <p><%= place.address %></p>
-            <p><a class="btn btn-secondary btn-xs" href="place" role="button">Show »</a></p>
-            <p><%= link_to 'Edit', edit_place_path(place) %> <%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-          </div>
-        <% end %>
+<div class="container">
+  <div class="row">
+    <% @places.each do |place| %>
+      <div class="col-md-4">
+        <h2><%= place.name %></h2>
+        <p><%= place.address %></p>
+        <p><a class="btn btn-secondary btn-xs" href="place" role="button">Show »</a></p>
+        <p><%= link_to 'Edit', edit_place_path(place) %> <%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </div>
+    <% end %>
     <%= link_to 'New Place', new_place_path %>
-    </div>
+  </div>
 </div>  <%#container%>
 <div class="front-page-map">
 </div>
-
-
-
