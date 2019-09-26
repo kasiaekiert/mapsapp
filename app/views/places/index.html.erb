@@ -26,7 +26,6 @@
 </div>
 =======
 <div class=container>
-  <div class="container">
       <div class="row">
         <% @places.each do |place| %>
           <div class="col-md-4">
@@ -36,10 +35,11 @@
             <p><%= link_to 'Edit', edit_place_path(place) %> <%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></p>
           </div>
         <% end %>
-      </div>
-      <%= link_to 'New Place', new_place_path %>
-
+    <%= link_to 'New Place', new_place_path %>
+    </div>
 </div>  <%#container%>
+<div class="front-page-map">
+</div>
 
 
 
