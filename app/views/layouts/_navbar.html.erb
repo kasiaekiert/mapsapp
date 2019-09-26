@@ -29,8 +29,16 @@
   </div>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2 my-lg-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-light my-2 my-sm-2" type="submit">Search</button>
-  </form>
+  <div class=container logininfo>
+      <% if user_signed_in? %>
+        <a href="#" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-user"></span> <%= current_user.email %>
+        </a>
+        <%= link_to "Logout ", destroy_user_session_path, method: :delete, :class => 'btn btn-default btn-sm glyphicon glyphicon-log-out'%>
+      <% else %>
+        <%= link_to "Login ", new_user_session_path, :class => 'btn btn-default btn-sm glyphicon glyphicon-log-in'%>
+      <% end %>
+    </div>
+   
+  
 </nav>
