@@ -16,9 +16,8 @@
       </li>
     </ul>
   </div>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <div class=container logininfo>
+
+  <div class="logininfo">
       <% if user_signed_in? %>
         <a href="#" class="btn btn-default btn-sm">
           <span class="glyphicon glyphicon-user"></span> <%= current_user.email %>
@@ -27,7 +26,5 @@
       <% else %>
         <%= link_to "Login ", new_user_session_path, :class => 'btn btn-default btn-sm glyphicon glyphicon-log-in'%>
       <% end %>
-    </div>
-   
-  
+  </div>
 </nav>
