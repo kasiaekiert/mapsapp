@@ -6,19 +6,14 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   </head>
 
   <body>
       <%= render "layouts/navbar" %>
-      
-      <div class=container logininfo>
-      <% if user_signed_in? %> 
-        <p> Loged in as: <%= current_user.email %></p>
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'%>
-      <% else %>
-        <p> Unlogged </p>
-      <% end %>
-    </div>
 
     <%= yield %>
     <%= render "layouts/footer" %>
