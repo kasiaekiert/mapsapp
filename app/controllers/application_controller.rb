@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
+  around_action :switch_locale
   rescue_from CanCan::AccessDenied, with: :unauthorized
 
   def switch_locale(&action)     
