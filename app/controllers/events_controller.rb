@@ -20,7 +20,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params.merge(user_id: current_user.id))
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'event was successfully created.' }
+        format.html { redirect_to @event, notice: t('.event_success' }
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new }
