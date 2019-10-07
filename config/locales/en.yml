@@ -30,4 +30,21 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    navbar:
+      logout: 'Logout'
+      login: 'Login'
+      home: 'Home'
+      events: 'Events'
+      places: 'Places'
+
+  places:
+    index: 
+      showmeevents: 'Show me events'
+      show: 'Show »'
+      edit: 'Edit'
+      destroy: 'Destroy'
+
+  events:
+    create:
+      event_success: "New event created"
