@@ -51,7 +51,17 @@ en:
       show: 'Show »'
       edit: 'Edit'
       destroy: 'Destroy'
+      newplace: 'Create new place'
+
 
   events:
     create:
-      event_success: "New event created"
+      event_success: 'New event created'
+    update:
+      event_update: 'event was successfully updated'
+    destroy:
+      event_destroy: 'Event destroyed'
+    new:
+      back: 'Back'
+    form:
+      name: 'Nazwa'
