@@ -8,6 +8,19 @@ pl:
       places: 'Miejsca'
 
   places:
+    create:
+      places_create: 'Miejscówka została utworzona'
+    update:
+      places_update: 'Miejscówka uaktualniona'
+    destroy:  
+      places_destroy: 'Miejscówka usunięta'
+    new:
+      new_place: 'Nowa miejscówka'
+      back: "Powrót"
+    form:
+      name: 'Nazwa'
+      adres: 'Adres'
+      
     index: 
       showmeevents: 'Najbliższe wydarzenia'
       show: 'Poznaj bliżej »'
@@ -26,4 +39,9 @@ pl:
       back: 'Powrót'
     form:
       name: 'Nazwa'
+    index: 
+      events: 'Wydarzenia'
+      name_event: 'Nazwa wydarzenia'
+      duration: 'Czas trwania'
+      start_at: 'Data startu'
 
