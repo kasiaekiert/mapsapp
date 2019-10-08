@@ -1,51 +1,23 @@
-<<<<<<< HEAD
 <div class="container">
   <h1> <%= t('.events') %> </h1>
-=======
-<<<<<<< HEAD
 <h1>Events</h1>
->>>>>>> views translations
 
   <table class= "table table-hover">
     <thead>
       <tr>
-<<<<<<< HEAD
-=======
-        <td><%= event.name %></td>
-        <td><%= event.duration %></td>
-        <td><%= event.started_at %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-=======
 <div class="container">
   <h1> <%= t('.events') %> </h1>
-
+  <tbody>
   <table class= "table table-hover">
     <thead>
+          <% @events.each do |event| %>
       <tr>
->>>>>>> views translations
         <th> <%= t('.name_event') %> </th>
         <th><%= t('.duration') %> </th>
         <th><%= t('.start_at') %> </th>
         <th colspan="3"></th>
-<<<<<<< HEAD
-=======
->>>>>>> 17abf96... views translations
->>>>>>> views translations
       </tr>
     </thead>
-
-    <tbody>
-      <% @events.each do |event| %>
-        <tr>
-          <td><%= event.name %></td>
-          <td><%= event.duration %></td>
-          <td><%= event.started_at %></td>
-          <td><%= link_to 'Show', event %></td>
-          <td><%= link_to 'Edit', edit_event_path(event) %></td>
-          <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
       <% end %>
     </tbody>
   </table>
