@@ -1,4 +1,12 @@
 pl:
+  activerecord:
+    models:
+      event: 'Wydarzenie'
+    attributes:
+      event: 
+        name: 'Nazwa'
+
+
   layouts:
     navbar:
       logout: 'Wyloguj'
