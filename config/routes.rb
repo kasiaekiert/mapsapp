@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :places
   resources :events
+  resources :users, only: [:show, :index]
+  resources :settings, only: [:update]
 
   root "places#index"
 
