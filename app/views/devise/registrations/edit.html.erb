@@ -32,6 +32,11 @@
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
+    <div class="field">
+      <%= form.label :locale %>
+      <%= form.select :locale, Setting.locales.keys %>
+    </div>
+
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
