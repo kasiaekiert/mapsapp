@@ -16,14 +16,5 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
-<<<<<<< HEAD
-=======
-//= require jquery3
-//= require popper
->>>>>>> d7ebaad... first commit bootstrap
 //= require bootstrap-sprockets
 //= require_tree .
-
-// $(document).ready(function() {
-//   $('.alert').alert();
-// });
