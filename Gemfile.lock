@@ -44,6 +44,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
+    after_party (1.11.2)
     arel (9.0.0)
     ast (2.4.0)
     axiom-types (0.1.1)
@@ -264,6 +265,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  after_party (~> 1.10)
   bootsnap (>= 1.1.0)
   byebug
   coffee-rails (~> 4.2)
