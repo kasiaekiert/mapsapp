@@ -38,6 +38,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise'
+gem 'after_party', '~> 1.10'
 
 
 group :development, :test do

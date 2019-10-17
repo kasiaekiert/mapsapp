@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   resources :places
   resources :events
+  resources :settings, only: [:update]
+
+  get "profile", to: "profile#show"
+  
 
   root "places#index"
 
