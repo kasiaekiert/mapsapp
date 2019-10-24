@@ -17,8 +17,16 @@
         <td><%= event.duration %></td>
         <td><%= event.started_at %></td>
         <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <% if event.user == current_user %>
+            <%= link_to 'Edit', edit_event_path(event) %>
+          <% end %>
+        </td>
+        <td>
+          <% if event.user == current_user %>
+            <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
