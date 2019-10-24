@@ -14,8 +14,17 @@
           <div class="col-md-4">
             <h2><%= place.name %></h2>
             <p><%= place.address %></p>
-            <p><%= link_to 'Show »', place_path(place), class: "btn btn-secondary btn-xs" %> </p>
-            <p><%= link_to 'Edit', edit_place_path(place) %> <%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            <p><%= link_to 'Show »', place_path(place), class: "btn btn-secondary btn-xs" %></p>
+            <p>
+              <% if place.user == current_user %>
+                 <%= link_to 'Edit', edit_place_path(place) %>
+              <% end %>
+            </p>
+            <p>
+            <% if place.user == current_user %>
+             <%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </p>
+            <% end %>
           </div>
         <% end %>
     <%= link_to 'New Place', new_place_path %>

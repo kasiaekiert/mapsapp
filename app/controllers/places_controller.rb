@@ -1,5 +1,6 @@
 class PlacesController < ApplicationController
   before_action :set_place, only: [:show, :edit, :update, :destroy]
+  before_action :set_current_user_place, only: [:edit, :update, :destroy]
 
   # GET /places
   # GET /places.json
@@ -20,6 +21,9 @@ class PlacesController < ApplicationController
 
   # GET /places/1/edit
   def edit
+    unless @place
+      redirect_to :places, notice: t('.place_access_deny') 
+    end
   end
 
   # POST /places
@@ -29,7 +33,7 @@ class PlacesController < ApplicationController
 
     respond_to do |format|
       if @place.save
-        format.html { redirect_to @place, notice: 'Place was successfully created.' }
+        format.html { redirect_to @place, notice: ('.place_created') }
         format.json { render :show, status: :created, location: @place }
       else
         format.html { render :new }
@@ -71,5 +75,9 @@ class PlacesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def place_params
       params.require(:place).permit(:name, :address)
+    end
+
+    def set_current_user_place
+      @place = current_user.places.find_by(id: params[:id])
     end
 end
