@@ -6,6 +6,8 @@ pl:
       event: 
         name: 'Nazwa'
 
+  profile:
+    locale: 'Język obsługi:'
 
   layouts:
     navbar:
@@ -35,6 +37,10 @@ pl:
       edit: 'Popraw'
       destroy: 'Usuń'
       newplace: 'Dodaj nowe miejsce'
+      title: 'Zaplanuj swoje sportowe wyzwanie'
+      second_title: 'Sport jest Twoją pasją? Szukasz aktywności którą pokochasz?'
+      third_title: 'Nieistotne co Tobą kieruje! Znajdź, zaplanuj i odwiedź najważniejsze sportowe wydarzenia w swojej okolicy!'
+      
 
   events:
     create:
@@ -52,4 +58,20 @@ pl:
       name_event: 'Nazwa wydarzenia'
       duration: 'Czas trwania'
       start_at: 'Data startu'
-
+      show: 'Dowiedz się więcej'
+      name: 'Nazwa'
+      author: 'Autor'
+      description: 'Opis wydarzenia'
+      show_places: 'Pokaż miejsca'
+  
+  device: 
+      sessions:
+        new:
+          login: 'Zaloguj'
+          email_new: 'Email:'
+          password_new: 'Hasło:'
+        login: 'Login'
+      users:
+        sign_up: 'Zarejstruj się'
+        password:
+          new: 'Zapomniałeś hasła?'
