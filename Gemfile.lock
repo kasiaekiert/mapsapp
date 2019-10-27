@@ -57,6 +57,7 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (11.0.1)
+    cancancan (3.0.1)
     codeclimate-engine-rb (0.4.1)
       virtus (~> 1.0)
     coderay (1.1.2)
@@ -274,6 +275,7 @@ DEPENDENCIES
   after_party (~> 1.10)
   bootsnap (>= 1.1.0)
   byebug
+  cancancan
   coffee-rails (~> 4.2)
   devise
   jbuilder (~> 2.5)

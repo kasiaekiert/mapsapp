@@ -39,6 +39,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise'
 gem 'after_party', '~> 1.10'
+gem 'cancancan'
+
 
 
 group :development, :test do
