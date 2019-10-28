@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_places, only: [:new, :edit]
+  before_action :set_event, only: [:show, :edit, :update]
 
   def index
     @events = Event.all 
@@ -53,6 +54,10 @@ class EventsController < ApplicationController
     def set_places
       @place = Place.all
     end
+
+    def set_event
+      @event = Event.find(params[:id])
+    end 
     
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
