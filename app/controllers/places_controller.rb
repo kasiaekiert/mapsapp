@@ -4,13 +4,13 @@ class PlacesController < ApplicationController
   # GET /places
   # GET /places.json
   def index
-    @places = Place.all
+    @places = Place.limit(6)
   end
 
   # GET /places/1
   # GET /places/1.json
   def show
-    @params = params
+    @params = params 
   end
 
   # GET /places/new
