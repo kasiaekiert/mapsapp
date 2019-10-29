@@ -14,6 +14,13 @@
 </p>
 
 <p>
+  <strong>List of users of this event:</strong>
+  <%= @event.users.each do |user| %>
+    <li> <%= link_to user.email, user_path(user) %> </li>
+  <% end %>
+</p>
+
+<p>
   <strong>Place:</strong>
   <%= @event.place.full_adress %>
 </p>

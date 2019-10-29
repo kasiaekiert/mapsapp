@@ -8,3 +8,9 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+<ul>
+  <% @user.events.each do |event| %>
+    <li> <%= link_to event.name, event_path(event) %> </li>
+  <% end %>
+</ul>
