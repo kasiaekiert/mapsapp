@@ -14,6 +14,14 @@ en:
     attributes:
       event: 
         name: 'Name'
+        duration: 'Duration'
+        started_at: 'Start at:'
+        place: 'Place'
+
+  links:
+    edit: 'Edit'
+    back: 'Back'
+    show_me_places: 'Show me places'
 
   layouts:
     navbar:
@@ -37,6 +45,8 @@ en:
       new_place: 'New Place'
       back: "Back"
     form:
+    new:
+    show:
       name: 'Name'
       adres: 'Address'
 
@@ -71,6 +81,11 @@ en:
       author: 'Author'
       description: 'Description'
       show_places: 'Show places in my area'
+      show:
+      name: 'Name'
+      duration: 'Duration'
+      start_at: 'Start at'
+      place: 'Place'
 
   device: 
     sessions:
@@ -83,6 +98,9 @@ en:
       sign_up: 'Sign up'
       password:
         new: 'Forgot your password?'
+    registration: 
+      new:
+        password_new: 'New password'
 
   setting:
     view: 

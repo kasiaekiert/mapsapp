@@ -5,9 +5,17 @@ pl:
     attributes:
       event: 
         name: 'Nazwa'
+        duration: 'Czas trwania'
+        started_at: 'Początek'
+        place: 'Miejsce'
 
   profile:
     locale: 'Język obsługi:'
+
+  links:
+    edit: 'Edytuj'
+    back: 'Powrót'
+    show_me_places: 'Pokaż mi miejsca'
 
   layouts:
     navbar:
@@ -16,6 +24,9 @@ pl:
       home: 'Strona główna'
       events: 'Wydarzenia'
       places: 'Miejsca'
+    footer: 
+      copyright: 'Prawa autorskie'
+      mappapp: 'MappApp'
 
   places:
     create:
@@ -28,6 +39,8 @@ pl:
       new_place: 'Nowa miejscówka'
       back: "Powrót"
     form:
+    new:
+    show:
       name: 'Nazwa'
       adres: 'Adres'
       
@@ -49,20 +62,26 @@ pl:
       event_update: 'Wydarzenie zostało uaktualnione'
     destroy:
       event_destroy: 'Wydarzenie zostało usunięte'
-    new:
-      back: 'Powrót'
     form:
       name: 'Nazwa'
-    index: 
-      events: 'Wydarzenia'
       name_event: 'Nazwa wydarzenia'
       duration: 'Czas trwania'
       start_at: 'Data startu'
+    index: 
+      events: 'Wydarzenia'
       show: 'Dowiedz się więcej'
       name: 'Nazwa'
       author: 'Autor'
       description: 'Opis wydarzenia'
       show_places: 'Pokaż miejsca'
+    new:
+      new_event: 'Nowe wydarzenie'
+      back: 'Powrót'
+    show:
+      name: 'Nazwa'
+      duration: 'Czas trwania'
+      start_at: 'Data startu'
+      place: 'Miejsce'
   
   device: 
       sessions:

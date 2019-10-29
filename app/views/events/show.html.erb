@@ -1,33 +1,35 @@
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
+<div class="container">
+  <p>
+    <strong><%= t('.name')%></strong>
+    <%= @event.name %>
+  </p>
 
-<p>
-  <strong>Started at:</strong>
-  <%= @event.started_at %>
-</p>
+  <p>
+    <strong><%= t('.start_at')%></strong>
+    <%= @event.started_at %>
+  </p>
 
-<p>
-  <strong>Duration:</strong>
-  <%= @event.duration %>
-</p>
+  <p>
+    <strong><%= t('.duration')%></strong>
+    <%= @event.duration %>
+  </p>
 
-<p>
-  <strong>List of users of this event:</strong>
-  <ul>
-    <% @event.members.each do |user| %>
-      <li> <%= user.email %> </li>
-    <% end %>
-  </ul>
-</p>
+  <p>
+    <strong>List of users of this event:</strong>
+    <ul>
+      <% @event.members.each do |user| %>
+        <li> <%= user.email %> </li>
+      <% end %>
+    </ul>
+  </p>
 
-<p>
-  <strong>Place:</strong>
-  <%= @event.place.full_adress %>
-</p>
+  <p>
+    <strong><%= t('.place')%></strong>
+    <%= @event.place.full_adress %>
+  </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+  <%= link_to t('links.edit'), edit_event_path(@event) %> |
+  <%= link_to t('links.back'), events_path %>
 
-<%= link_to 'Show me places', places_path %>
+  <%= link_to t('links.show_me_places'), places_path %>
+</div>
