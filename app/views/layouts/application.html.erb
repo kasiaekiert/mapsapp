@@ -12,11 +12,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div class="container">
-      <%= flash_message %>
-    </div>
 
     <%= render "layouts/navbar" %>
+    <div class="container flash_message">
+      <%= flash_message %>
+    </div>
     <%= yield %>
     <%= render "layouts/footer" %>
   </body>

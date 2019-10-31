@@ -1,6 +1,6 @@
 module ApplicationHelper
   def flash_message
-    flash.each do |key, value|
+    flash.map do |key, value|
       level_class = case key
         when 'notice' then "alert alert-info"
         when 'success' then "alert alert-success"
@@ -8,10 +8,19 @@ module ApplicationHelper
         when 'alert' then "alert alert-warning"
       end 
       content_tag :div, class: level_class do
-        value
+       [ value, button_tag ].join('').html_safe
       end
-    end 
+    end.join('').html_safe
 
+  end
+
+  def button_tag
+    content_tag :button, class: "close", type: 'button' do
+      [
+        content_tag(:span, "x"),
+        content_tag(:span, "Close")   #dodac klasy na zamykanie i javascript 
+      ].join('').html_safe
+    end
   end
 end
 
