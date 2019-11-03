@@ -15,17 +15,11 @@ module ApplicationHelper
   end
 
   def button_tag
-    content_tag :button, class: "close", type: 'button' do
+    content_tag :button, class: "close", 'data-dismiss' => "alert", type: 'button' do
       [
-        content_tag(:span, "x"),
-        content_tag(:span, "Close")   #dodac klasy na zamykanie i javascript 
+        content_tag(:span, "x", 'aria-hidden' => "true"),
+        content_tag(:span, "Close", class: 'sr-only')
       ].join('').html_safe
     end
   end
 end
-
-  # <div class="<%= flash_class(key) %>">
-  #  <%= value %>
-  #  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-  #  <% end %>
-  # </div>
