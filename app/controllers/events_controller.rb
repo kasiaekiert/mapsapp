@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
   before_action :set_places, only: [:new, :edit]
-  before_action :set_event, only: [:show, :edit, :update]
+  #before_action :set_event, only: [:show, :edit, :update]
+
+  authorize! :update, :show, :edit @event
 
   def index
     @events = Event.all 
