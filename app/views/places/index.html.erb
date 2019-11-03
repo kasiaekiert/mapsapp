@@ -9,7 +9,7 @@
 </div>
 
 <div class="container">
-  <h1>Places</h1>
+  <h1> <%= t('.indexplace') %> </h1>
   <div class="row">
     <% @places.each do |place| %>
       <div class="col-md-4">
@@ -24,6 +24,6 @@
   </div>
 </div>  <%#container%>
 
-<%= link_to 'Show me EVENTS', events_path %></td>
+<%= link_to t('.showevents'), events_path %></td>
 <div class="front-page-map">
 </div>

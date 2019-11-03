@@ -9,6 +9,14 @@ pl:
         started_at: 'Początek'
         place: 'Miejsce'
 
+  activerecord:
+    models:
+      place: 'Miejscówka'
+    attributes:
+      place: 
+        name: 'Nazwa'
+        adres: 'Adres'
+
   profile:
     locale: 'Język obsługi:'
 
@@ -38,12 +46,8 @@ pl:
     new:
       new_place: 'Nowa miejscówka'
       back: "Powrót"
-    form:
-    new:
-    show:
-      name: 'Nazwa'
-      adres: 'Adres'
-      
+    edit: 
+      editplace: 'Zmień informacje o miejscówce:'
     index: 
       showmeevents: 'Najbliższe wydarzenia'
       show: 'Poznaj bliżej »'
@@ -53,7 +57,8 @@ pl:
       title: 'Zaplanuj swoje sportowe wyzwanie'
       second_title: 'Sport jest Twoją pasją? Szukasz aktywności którą pokochasz?'
       third_title: 'Nieistotne co Tobą kieruje! Znajdź, zaplanuj i odwiedź najważniejsze sportowe wydarzenia w swojej okolicy!'
-      
+      indexplace: 'Miejscówki'
+      showevents: 'Pokaż mi wydarzenia'
 
   events:
     create:

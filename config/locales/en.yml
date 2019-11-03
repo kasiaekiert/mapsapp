@@ -3,6 +3,15 @@
 
 en:
   activerecord:
+    models:
+      user: Customer
+    attributes:
+      user:
+        login: "Handle"
+
+
+        
+  activerecord:
     errors:
       models:
         event:

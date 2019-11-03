@@ -13,12 +13,12 @@
     <% end %>
 
     <div class="field">
-      <%= form.label t('.name') %>
+      <%= form.label Place.human_attribute_name("name") %>
       <%= form.text_field :name %>
     </div>
 
     <div class="field">
-      <%= form.label t('.adres') %>
+      <%= form.label Place.human_attribute_name("adres") %>
       <%= form.text_area :address %>
     </div>
 
