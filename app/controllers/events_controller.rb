@@ -1,8 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_places, only: [:new, :edit]
-  #before_action :set_event, only: [:show, :edit, :update]
-
-  authorize! :update, :show, :edit @event
+  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :check_authorization, only: [:edit, :update, :destroy]
 
   def index
     @events = Event.all 
@@ -60,6 +59,10 @@ class EventsController < ApplicationController
     def set_event
       @event = Event.find(params[:id])
     end 
+
+    def check_authorization
+      authorize! :manage, @event
+    end
     
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params

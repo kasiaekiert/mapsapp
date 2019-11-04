@@ -19,12 +19,12 @@
           <td><%= event.started_at %></td>
           <td><%= link_to 'Show', event %></td>
           <td>
-          <% if can? :create, event %>
+          <% if can? :manage, event %>
             <%= link_to "Edit", edit_event_path(event) %>
           <% end %>
           </td>
           <td>
-          <% if can? :create, event %>
+          <% if can? :manage, event %>
             <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %>
           </td>
