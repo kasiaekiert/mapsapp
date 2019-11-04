@@ -8,3 +8,18 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+<h2>You take part in:</h2>
+<ul>
+  <% @user.events.each do |event| %>
+    <li> <%= link_to event.name, event_path(event) %> </li>
+  <% end %>
+</ul>
+
+
+<h2>You created these events:</h2>
+<ul>
+  <% @user.owned_events.each do |event| %>
+    <li> <%= link_to event.name, event_path(event) %> </li>
+  <% end %>
+</ul>
