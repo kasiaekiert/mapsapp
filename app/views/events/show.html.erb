@@ -15,9 +15,11 @@
 
 <p>
   <strong>List of users of this event:</strong>
-  <%= @event.members.each do |user| %>
-    <li> <%= link_to user.email, user_path(user) %> </li>
-  <% end %>
+  <ul>
+    <% @event.members.each do |user| %>
+      <li> <%= user.email %> </li>
+    <% end %>
+  </ul>
 </p>
 
 <p>
