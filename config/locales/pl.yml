@@ -2,23 +2,26 @@ pl:
   activerecord:
     models:
       event: 'Wydarzenie'
+      place: 'Miejscówka'
+      setting: 'Ustawienia'
+
     attributes:
       event: 
         name: 'Nazwa'
         duration: 'Czas trwania'
         started_at: 'Początek'
         place: 'Miejsce'
-
-  activerecord:
-    models:
-      place: 'Miejscówka'
-    attributes:
       place: 
         name: 'Nazwa'
         adres: 'Adres'
-
-  profile:
-    locale: 'Język obsługi:'
+      setting:
+        locale: 'Język obsługi:'
+    errors:
+      models:
+        event:
+          attributes:
+            name:
+              too_short_name: 'jest za krótka'
 
   links:
     edit: 'Edytuj'
@@ -67,11 +70,6 @@ pl:
       event_update: 'Wydarzenie zostało uaktualnione'
     destroy:
       event_destroy: 'Wydarzenie zostało usunięte'
-    form:
-      name: 'Nazwa'
-      name_event: 'Nazwa wydarzenia'
-      duration: 'Czas trwania'
-      start_at: 'Data startu'
     index: 
       events: 'Wydarzenia'
       show: 'Dowiedz się więcej'
@@ -83,19 +81,5 @@ pl:
       new_event: 'Nowe wydarzenie'
       back: 'Powrót'
     show:
-      name: 'Nazwa'
-      duration: 'Czas trwania'
-      start_at: 'Data startu'
-      place: 'Miejsce'
+      users_of_events: 'Lista osób biorących udział w wydarzeniu:'
   
-  device: 
-      sessions:
-        new:
-          login: 'Zaloguj'
-          email_new: 'Email:'
-          password_new: 'Hasło:'
-        login: 'Login'
-      users:
-        sign_up: 'Zarejstruj się'
-        password:
-          new: 'Zapomniałeś hasła?'

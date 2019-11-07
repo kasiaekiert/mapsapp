@@ -1,21 +1,21 @@
 <div class="container">
   <p>
-    <strong><%= t('.name')%></strong>
+    <strong><%= Event.human_attribute_name(:name) %> </strong>
     <%= @event.name %>
   </p>
 
   <p>
-    <strong><%= t('.start_at')%></strong>
+    <strong><%= Event.human_attribute_name(:started_at) %></strong>
     <%= @event.started_at %>
   </p>
 
   <p>
-    <strong><%= t('.duration')%></strong>
+    <strong><%= Event.human_attribute_name(:duration) %></strong>
     <%= @event.duration %>
   </p>
 
   <p>
-    <strong>List of users of this event:</strong>
+    <strong> <%= t('.users_of_events')%></strong>
     <ul>
       <% @event.members.each do |user| %>
         <li> <%= user.email %> </li>
@@ -24,7 +24,7 @@
   </p>
 
   <p>
-    <strong><%= t('.place')%></strong>
+    <strong><%= Place.model_name.human %></strong>
     <%= @event.place.full_adress %>
   </p>
 

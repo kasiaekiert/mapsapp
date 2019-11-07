@@ -5,27 +5,20 @@ en:
   activerecord:
     models:
       user: Customer
+      event: 'Event'
     attributes:
       user:
         login: "Handle"
-
-
-        
-  activerecord:
+      event: 
+        name: 'Name'
+        duration: 'Duration'
+        started_at: 'Start at:'
     errors:
       models:
         event:
           attributes:
             name:
               too_short_name: "is too short (minimum %{count} chars)"
-    models:
-      event: 'Event'
-    attributes:
-      event: 
-        name: 'Name'
-        duration: 'Duration'
-        started_at: 'Start at:'
-        place: 'Place'
 
   links:
     edit: 'Edit'
@@ -53,8 +46,6 @@ en:
     new:
       new_place: 'New Place'
       back: "Back"
-    form:
-    new:
     show:
       name: 'Name'
       adres: 'Address'
@@ -78,23 +69,15 @@ en:
       event_destroy: 'Event destroyed'
     new:
       back: 'Back'
-    form:
-      name: 'Name'
     index: 
       events: 'Events'
-      name_event: 'Event name:'
-      duration: 'Duration:'
-      start_at: 'Started at'
       show: 'Get to know more'
       name: 'Name'
       author: 'Author'
       description: 'Description'
       show_places: 'Show places in my area'
-      show:
-      name: 'Name'
-      duration: 'Duration'
-      start_at: 'Start at'
-      place: 'Place'
+    show:
+      users_of_events: 'List of users of this event:'
 
   device: 
     sessions:

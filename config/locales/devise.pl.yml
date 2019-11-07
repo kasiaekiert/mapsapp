@@ -38,14 +38,25 @@ pl:
       signed_up_but_unconfirmed: "Wiadomość email z instrukcją aktywacji konta została przesłana na Twój adres email. Użj linku z emaila aby aktywować konto."
       update_needs_confirmation: "Konto zostało zaktualizowane. Niemniej jednak przed wprowadzeniem zmian musimy potwierdzić Twój nowy adres email. Za chwilę wyślemy instrukcję na nowy adres."
       updated: "Konto zostało pomyślnie zaktualizowane."
+      new:
+        password_new: 'Hasło:'
     sessions:
       user:
         signed_in: "Zostałeś zalogowany."
         signed_out: "Zostałeś wylogowany."
+      new:
+        login: 'Zaloguj'
+        email_new: 'Email:'
+        password_new: 'Hasło:'
+      users:
+        sign_up: 'Zarejstruj się'
+        password:
+          new: 'Zapomniałeś hasła?'
     unlocks:
       send_instructions: "Za chwilę otrzymasz wiadomość email z instrukcją jak odblokować konto."
       send_paranoid_instructions: "Jeżeli Twoje konto istnieje, otrzymasz wiadomość emial z instrukcją jak odblokować konto."
       unlocked: "Twoje konto została pomyślnie odblokowane. Zaloguj się by kontynuować."
+    
   errors:
     messages:
       already_confirmed: "już został aktywowany, proszę spróbować się zalogować."
