@@ -1,39 +1,99 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
   activerecord:
+    models:
+      user: Customer
+      event: 'Event'
+    attributes:
+      user:
+        login: "Handle"
+      event: 
+        name: 'Name'
+        duration: 'Duration'
+        started_at: 'Start at:'
     errors:
       models:
         event:
           attributes:
             name:
               too_short_name: "is too short (minimum %{count} chars)"
+
+  links:
+    edit: 'Edit'
+    back: 'Back'
+    show_me_places: 'Show me places'
+
+  layouts:
+    navbar:
+      logout: 'Logout'
+      login: 'Login'
+      home: 'Home'
+      events: 'Events'
+      places: 'Places'
+    footer: 
+      copyright: 'Copyright'
+      mappapp: 'MappApp'
+
+  places:
+    create:
+      places_create: 'Place was successfully created.'
+    update:
+      places_update: 'Place was successfully updated.'
+    destroy:  
+      places_destroy: 'Place was successfully deleyed.'
+    new:
+      new_place: 'New Place'
+      back: "Back"
+    show:
+      name: 'Name'
+      adres: 'Address'
+
+    index: 
+      showmeevents: 'Show me events'
+      show: 'Show »'
+      edit: 'Edit'
+      destroy: 'Destroy'
+      newplace: 'Create new place'
+      title: 'Sports challenges, events, parties'
+      second_title: 'Do you love sport? Or maybe you are looking for new activity?'
+      third_title: 'Look for the most important sports events in your area, meet local sport freaks.'
+  
+  events:
+    create:
+      event_success: 'New event created'
+    update:
+      event_update: 'event was successfully updated'
+    destroy:
+      event_destroy: 'Event destroyed'
+    new:
+      back: 'Back'
+    index: 
+      events: 'Events'
+      show: 'Get to know more'
+      name: 'Name'
+      author: 'Author'
+      description: 'Description'
+      show_places: 'Show places in my area'
+    show:
+      users_of_events: 'List of users of this event:'
+
+  device: 
+    sessions:
+      new:
+        login: 'Log in'
+        email_new: 'Email adress:'
+        password_new: 'Password:'
+      login: 'Login'
+    users:
+      sign_up: 'Sign up'
+      password:
+        new: 'Forgot your password?'
+    registration: 
+      new:
+        password_new: 'New password'
+
+  setting:
+    view: 
+      locale: 'Locale'

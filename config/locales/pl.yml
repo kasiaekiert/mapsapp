@@ -1,0 +1,85 @@
+pl:
+  activerecord:
+    models:
+      event: 'Wydarzenie'
+      place: 'Miejscówka'
+      setting: 'Ustawienia'
+
+    attributes:
+      event: 
+        name: 'Nazwa'
+        duration: 'Czas trwania'
+        started_at: 'Początek'
+        place: 'Miejsce'
+      place: 
+        name: 'Nazwa'
+        adres: 'Adres'
+      setting:
+        locale: 'Język obsługi:'
+    errors:
+      models:
+        event:
+          attributes:
+            name:
+              too_short_name: 'jest za krótka'
+
+  links:
+    edit: 'Edytuj'
+    back: 'Powrót'
+    show_me_places: 'Pokaż mi miejsca'
+
+  layouts:
+    navbar:
+      logout: 'Wyloguj'
+      login: 'Zaloguj się'
+      home: 'Strona główna'
+      events: 'Wydarzenia'
+      places: 'Miejsca'
+    footer: 
+      copyright: 'Prawa autorskie'
+      mappapp: 'MappApp'
+
+  places:
+    create:
+      places_create: 'Miejscówka została utworzona'
+    update:
+      places_update: 'Miejscówka uaktualniona'
+    destroy:  
+      places_destroy: 'Miejscówka usunięta'
+    new:
+      new_place: 'Nowa miejscówka'
+      back: "Powrót"
+    edit: 
+      editplace: 'Zmień informacje o miejscówce:'
+    index: 
+      showmeevents: 'Najbliższe wydarzenia'
+      show: 'Poznaj bliżej »'
+      edit: 'Popraw'
+      destroy: 'Usuń'
+      newplace: 'Dodaj nowe miejsce'
+      title: 'Zaplanuj swoje sportowe wyzwanie'
+      second_title: 'Sport jest Twoją pasją? Szukasz aktywności którą pokochasz?'
+      third_title: 'Nieistotne co Tobą kieruje! Znajdź, zaplanuj i odwiedź najważniejsze sportowe wydarzenia w swojej okolicy!'
+      indexplace: 'Miejscówki'
+      showevents: 'Pokaż mi wydarzenia'
+
+  events:
+    create:
+      event_success: 'Utworzono nowe wydarzenie'
+    update: 
+      event_update: 'Wydarzenie zostało uaktualnione'
+    destroy:
+      event_destroy: 'Wydarzenie zostało usunięte'
+    index: 
+      events: 'Wydarzenia'
+      show: 'Dowiedz się więcej'
+      name: 'Nazwa'
+      author: 'Autor'
+      description: 'Opis wydarzenia'
+      show_places: 'Pokaż miejsca'
+    new:
+      new_event: 'Nowe wydarzenie'
+      back: 'Powrót'
+    show:
+      users_of_events: 'Lista osób biorących udział w wydarzeniu:'
+  

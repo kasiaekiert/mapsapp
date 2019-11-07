@@ -1,32 +1,29 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">Hello, world!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <h1 class="display-4"> <%= t('.title')%> </h1>
+    <p class="lead"> <%= t('.second_title')%> </p>
     <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <%= link_to 'Events', events_path, :class => "btn btn-primary btn-lg" %>
-
+    <p> <%= t('.third_title')%> </p>
+    <%= link_to t('.showmeevents'), events_path, :class => "btn btn-primary btn-lg" %>
   </div>
 </div>
 
 <div class="container">
-  <h1>Places</h1>
+  <h1> <%= t('.indexplace') %> </h1>
   <div class="row">
     <% @places.each do |place| %>
       <div class="col-md-4">
         <h2><%= place.name %></h2>
         <p><%= place.address %></p>
-        <p><%= link_to 'Show »', place_path(place), class: "btn btn-secondary btn-xs" %></p>
-        <p><%= link_to 'Edit', edit_place_path(place) %></p>
-        <p><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p><%= link_to t('.show'), place_path(place), class: "btn btn-secondary btn-xs" %></p>
+        <p><%= link_to t('.edit'), edit_place_path(place) %></p>
+        <p><%= link_to t('.destroy'), place, method: :delete, data: { confirm: t('.sure') } %></p>
       </div>
     <% end %>
-    <%= link_to 'New Place', new_place_path %>
+    <%= link_to t('.newplace'), new_place_path %>
   </div>
 </div>  <%#container%>
+
+<%= link_to t('.showevents'), events_path %></td>
 <div class="front-page-map">
 </div>
-<br>
-
-<%= link_to 'Show me EVENTS', events_path %></td>
-

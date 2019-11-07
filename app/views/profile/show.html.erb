@@ -1,25 +1,27 @@
-<%= form_with(model: @setting, local: true) do |form| %>
-  <div class="field">
-    <%= form.label :locale %>
-    <%= form.select :locale, Setting.locales.keys %>
-  </div>
+<div class="container">
+  <%= form_with(model: @setting, local: true) do |form| %>
+    <div class="field">
+      <%= form.label :locale %>
+      <%= form.select :locale, Setting.locales.keys %>
+    </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-
-<h2>You take part in:</h2>
-<ul>
-  <% @user.events.each do |event| %>
-    <li> <%= link_to event.name, event_path(event) %> </li>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
   <% end %>
-</ul>
 
+  <h2>You take part in:</h2>
+  <ul>
+    <% @user.events.each do |event| %>
+      <li> <%= link_to event.name, event_path(event) %> </li>
+    <% end %>
+  </ul>
 
-<h2>You created these events:</h2>
-<ul>
-  <% @user.owned_events.each do |event| %>
-    <li> <%= link_to event.name, event_path(event) %> </li>
-  <% end %>
-</ul>
+  <h2>You created these events:</h2>
+  <ul>
+    <% @user.owned_events.each do |event| %>
+      <li> <%= link_to event.name, event_path(event) %> </li>
+    <% end %>
+  </ul>
+
+</div>

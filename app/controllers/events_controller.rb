@@ -21,7 +21,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params.merge(user_id: current_user.id))
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'event was successfully created.' }
+        format.html { redirect_to @event, notice: t('.event_success') }
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new }
@@ -33,7 +33,7 @@ class EventsController < ApplicationController
   def update
     respond_to do |format|
       if @event.update(event_params)
-        format.html { redirect_to @event, notice: 'event was successfully updated.' }
+        format.html { redirect_to @event, notice: t('.event_update') }
         format.json { render :show, status: :ok, location: @event }
       else
         format.html { render :edit }
@@ -45,7 +45,7 @@ class EventsController < ApplicationController
   def destroy
     @event.destroy
     respond_to do |format|
-      format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
+      format.html { redirect_to events_url, notice: t('.event_destroy') }
       format.json { head :no_content }
     end
   end

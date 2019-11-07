@@ -1,12 +1,14 @@
-<p>
-  <strong>Name:</strong>
-  <%= @place.name %>
-</p>
+<div class="container">
+  <p>
+    <strong> <%= t('.name') %> </strong>
+    <%= @place.name %>
+  </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @place.address %>
-</p>
+  <p>
+    <strong> <%= t('.adres') %> </strong>
+    <%= @place.address %>
+  </p>
 
-<%= link_to 'Edit', edit_place_path(@place) %> |
-<%= link_to 'Back', places_path %>
+  <%= link_to t('links.edit'), edit_place_path(@place) %> |
+  <%= link_to t('links.back'), places_path %>
+</div>
