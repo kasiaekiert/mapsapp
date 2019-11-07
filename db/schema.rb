@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_18_164525) do
+ActiveRecord::Schema.define(version: 2019_10_29_121740) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,11 +27,32 @@ ActiveRecord::Schema.define(version: 2019_09_18_164525) do
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
+  create_table "events_users", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_events_users_on_event_id"
+    t.index ["user_id"], name: "index_events_users_on_user_id"
+  end
+
   create_table "places", force: :cascade do |t|
     t.string "name"
     t.text "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "settings", force: :cascade do |t|
+    t.integer "locale"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_settings_on_user_id"
+  end
+
+  create_table "task_records", id: false, force: :cascade do |t|
+    t.string "version", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -48,4 +69,7 @@ ActiveRecord::Schema.define(version: 2019_09_18_164525) do
 
   add_foreign_key "events", "places"
   add_foreign_key "events", "users"
+  add_foreign_key "events_users", "events"
+  add_foreign_key "events_users", "users"
+  add_foreign_key "settings", "users"
 end
