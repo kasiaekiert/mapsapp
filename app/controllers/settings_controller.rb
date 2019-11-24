@@ -4,7 +4,7 @@ class SettingsController < ApplicationController
     @setting = current_user.setting
     respond_to do |format|
       if @setting.update(setting_params)
-        format.html { redirect_to profile_path, notice: 'setting was successfully updated.' }
+        format.html { redirect_to profile_path, notice: "<%= t('.setting_updated')%>" }
         format.json { render :show, status: :ok, location: @setting }
       else
         format.html { render profile_path }

@@ -19,11 +19,19 @@ en:
           attributes:
             name:
               too_short_name: "is too short (minimum %{count} chars)"
+  controller: 
+    application-controller:
+      alert: 'You have no access here'
+    setting_controller:
+      flash_message:
+        alert-info: Your setting was successfully updated.
 
   links:
     edit: 'Edit'
     back: 'Back'
     show_me_places: 'Show me places'
+    destroy: 'Usuń'
+
 
   layouts:
     navbar:
@@ -36,6 +44,10 @@ en:
       copyright: 'Copyright'
       mappapp: 'MappApp'
 
+  profile:
+    show:
+      take_part: 'You are going to take part in:'
+      created_events: 'Events created by you:'
   places:
     create:
       places_create: 'Place was successfully created.'
@@ -59,7 +71,8 @@ en:
       title: 'Sports challenges, events, parties'
       second_title: 'Do you love sport? Or maybe you are looking for new activity?'
       third_title: 'Look for the most important sports events in your area, meet local sport freaks.'
-  
+  application_helper:
+    alert-info: 'Alert ERROR'
   events:
     create:
       event_success: 'New event created'
