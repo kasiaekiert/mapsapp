@@ -17,6 +17,7 @@
           <td><%= event.duration %></td>
           <td><%= event.started_at %></td>
           <td><%= link_to 'Show', event %></td>
+          <td><%= link_to 'Add me to this event', add_me_event_path(event) %></td>
           <td>
             <% if can? :manage, event %>
               <%= link_to "Edit", edit_event_path(event) %>
