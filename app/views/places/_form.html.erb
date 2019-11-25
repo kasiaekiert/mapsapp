@@ -12,18 +12,18 @@
       </div>
     <% end %>
 
-    <div class="field">
+    <div class="form-group">
       <%= form.label Place.human_attribute_name("name") %>
-      <%= form.text_field :name %>
+      <input type="name" class="form-control" %>
     </div>
 
-    <div class="field">
+    <div class="form-group">
       <%= form.label Place.human_attribute_name("adres") %>
-      <%= form.text_area :address %>
+      <input type="address" class="form-control" %>
     </div>
 
-    <div class="actions">
-      <%= form.submit %>
+    <div>
+      <button type="submit" class="btn btn-primary mb-2"><%= t(".submit")%></button>
     </div>
   <% end %>
 </div>

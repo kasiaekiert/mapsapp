@@ -35,6 +35,7 @@ pl:
       home: 'Strona główna'
       events: 'Wydarzenia'
       places: 'Miejsca'
+      profile: 'Ustawienia użytkownika'
     footer: 
       copyright: 'Prawa autorskie'
       mappapp: 'MappApp'

@@ -32,6 +32,8 @@ en:
       home: 'Home'
       events: 'Events'
       places: 'Places'
+      profile: 'User Settings' 
+
     footer: 
       copyright: 'Copyright'
       mappapp: 'MappApp'
