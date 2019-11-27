@@ -11,6 +11,7 @@ pl:
         duration: 'Czas trwania'
         started_at: 'Początek'
         place: 'Miejsce'
+
       place: 
         name: 'Nazwa'
         adres: 'Adres'
@@ -77,6 +78,10 @@ pl:
       author: 'Autor'
       description: 'Opis wydarzenia'
       show_places: 'Pokaż miejsca'
+      new_event: 'Dodaj nowe wydarzenie'
+      destroy: 'Usuń'
+      edit: 'Zmień'
+      show: 'Pokaż szczegóły'
     new:
       new_event: 'Nowe wydarzenie'
       back: 'Powrót'

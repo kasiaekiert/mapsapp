@@ -16,16 +16,16 @@
           <td><%= event.name %></td>
           <td><%= event.duration %></td>
           <td><%= event.started_at %></td>
-          <td><%= link_to 'Show', event %></td>
-          <td><%= link_to 'Add me to this event', add_me_event_path(event) %></td>
+          <td><%= link_to t('.show'), event %></td>
+          <td><%#= link_to t('.add_me'), add_me_event_path(event) %></td>
           <td>
             <% if can? :manage, event %>
-              <%= link_to "Edit", edit_event_path(event) %>
+              <%= link_to t('.edit'), edit_event_path(event) %>
             <% end %>
           </td>
           <td>
             <% if can? :manage, event %>
-              <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to t('.destroy'), event, method: :delete, data: { confirm: 'Are you sure?' } %>
             <% end %>
           </td>
         </tr>
@@ -35,7 +35,7 @@
 
   <br>
 
-  <%= link_to 'New event', new_event_path %>
+  <%= link_to t('.new_event'), new_event_path %>
   <br>
-  <%= link_to 'Show me places', places_path %>
+  <%= link_to t('.show_places'), places_path %>
 </div>

@@ -76,6 +76,10 @@ en:
       author: 'Author'
       description: 'Description'
       show_places: 'Show places in my area'
+      new_event: 'Dodaj nowe wydarzenie'
+      destroy: 'Usuń'
+      edit: 'Zmień'
+      show: 'Pokaż szczegóły'
     show:
       users_of_events: 'List of users of this event:'
 
