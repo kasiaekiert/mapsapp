@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :places
-  resources :events
+  resources :events do 
+    resources :members, only: [:create]
+  end
   resources :settings, only: [:update]
 
   get "profile", to: "profile#show"

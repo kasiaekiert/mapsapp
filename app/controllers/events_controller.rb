@@ -10,11 +10,6 @@ class EventsController < ApplicationController
   def show
   end
 
-  def add_me
-    @event = current_event
-    @user = current_user
-  end 
-
   def new
     @event = Event.new
   end
