@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :places
   resources :events do 
-    resources :members, only: [:create]
+    resources :members, only: [:create, :delete]
+    resources :profile, only: [:delete]
   end
   resources :settings, only: [:update]
 

@@ -17,6 +17,8 @@
   <p>
     <% if @event.has_member?(current_user) %>
       <%= t('.you_are_member') %>
+      <%= link_to t('.remove_me_from_event'), event_members_path(@event), method: :delete %>
+
     <% else %>
       <%= link_to t('.add_me'), event_members_path(@event), method: :post %>
     <% end %>

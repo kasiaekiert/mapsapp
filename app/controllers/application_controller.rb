@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   around_action :switch_locale
   rescue_from CanCan::AccessDenied, with: :unauthorized
 
-  def switch_locale(&action)     
+  def switch_locale(&action)
     locale = current_user ? current_user.setting.locale : I18n.default_locale
   
     I18n.with_locale(locale, &action)   
