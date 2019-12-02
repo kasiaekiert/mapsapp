@@ -24,6 +24,10 @@ en:
     edit: 'Edit'
     back: 'Back'
     show_me_places: 'Show me places'
+    destroy: 'Destroy'
+    edit: 'Edit'
+    show: 'Show'
+    add_me: 'Add me to the event'
 
   layouts:
     navbar:
@@ -45,16 +49,12 @@ en:
       places_destroy: 'Place was successfully deleyed.'
     new:
       new_place: 'New Place'
-      back: "Back"
     show:
       name: 'Name'
       adres: 'Address'
 
     index: 
-      showmeevents: 'Show me events'
-      show: 'Show »'
-      edit: 'Edit'
-      destroy: 'Destroy'
+      showmeevents: 'Show me events'    
       newplace: 'Create new place'
       title: 'Sports challenges, events, parties'
       second_title: 'Do you love sport? Or maybe you are looking for new activity?'
@@ -64,11 +64,9 @@ en:
     create:
       event_success: 'New event created'
     update:
-      event_update: 'event was successfully updated'
+      event_update: 'Event was successfully updated'
     destroy:
       event_destroy: 'Event destroyed'
-    new:
-      back: 'Back'
     index: 
       events: 'Events'
       show: 'Get to know more'
@@ -76,10 +74,8 @@ en:
       author: 'Author'
       description: 'Description'
       show_places: 'Show places in my area'
-      new_event: 'Dodaj nowe wydarzenie'
-      destroy: 'Usuń'
-      edit: 'Zmień'
-      show: 'Pokaż szczegóły'
+      new_event: 'Add new event'
+      you_are_member: 'You are a member'
     show:
       users_of_events: 'List of users of this event:'
 
