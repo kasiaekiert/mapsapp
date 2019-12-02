@@ -15,9 +15,9 @@
       <div class="col-md-4">
         <h2><%= place.name %></h2>
         <p><%= place.address %></p>
-        <p><%= link_to t('.show'), place_path(place), class: "btn btn-secondary btn-xs" %></p>
-        <p><%= link_to t('.edit'), edit_place_path(place) %></p>
-        <p><%= link_to t('.destroy'), place, method: :delete, data: { confirm: t('.sure') } %></p>
+        <p><%= link_to t('links.show'), place_path(place), class: "btn btn-secondary btn-xs" %></p>
+        <p><%= link_to t('links.edit'), edit_place_path(place) %></p>
+        <p><%= link_to t('links.destroy'), place, method: :delete, data: { confirm: t('.sure') } %></p>
       </div>
     <% end %>
     <%= link_to t('.newplace'), new_place_path %>

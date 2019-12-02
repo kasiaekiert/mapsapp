@@ -15,6 +15,12 @@
   </p>
 
   <p>
+    <% if @event.has_member?(current_user) %>
+      <%= t('.you_are_member') %>
+    <% else %>
+      <%= link_to t('.add_me'), event_members_path(@event), method: :post %>
+    <% end %>
+
     <strong> <%= t('.users_of_events')%></strong>
     <ul>
       <% @event.members.each do |user| %>
