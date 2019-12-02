@@ -28,8 +28,12 @@
     <%= @event.place.full_adress %>
   </p>
 
-  <%= link_to t('links.edit'), edit_event_path(@event) %> |
-  <%= link_to t('links.back'), events_path %>
-
-  <%= link_to t('links.show_me_places'), places_path %>
+  <div class="container float-right">
+    <% if can? :manage, @event %>
+      <%= link_to t('links.edit'), edit_event_path(@event) %> |
+    <% end %>
+      <%= link_to t('links.back'), events_path %> |
+  
+      <%= link_to t('links.show_me_places'), places_path %>
+  </div>
 </div>
