@@ -6,18 +6,20 @@
     </div>
 
     <div class="actions">
-      <%= form.submit %>
+      <button type="form.submit" class="btn btn-primary"> <%= t('.save_changes')%> </button>
     </div>
   <% end %>
+  <br>
+  <br>
 
-  <h2>You take part in:</h2>
+  <h2> <%= t('.take_part_event') %> </h2>
   <ul>
     <% @user.events.each do |event| %>
       <li> <%= link_to event.name, event_path(event) %> </li>
     <% end %>
   </ul>
 
-  <h2>You created these events:</h2>
+  <h2> <%= t('.creted_events') %> </h2>
   <ul>
     <% @user.owned_events.each do |event| %>
       <li> <%= link_to event.name, event_path(event) %> </li>

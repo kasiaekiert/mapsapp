@@ -78,9 +78,17 @@ pl:
       author: 'Autor'
       description: 'Opis wydarzenia'
       show_places: 'Pokaż miejsca'
+      new_event: 'Stwórz nowe wydarzenie'
+
     new:
       new_event: 'Nowe wydarzenie'
       back: 'Powrót'
     show:
       users_of_events: 'Lista osób biorących udział w wydarzeniu:'
+      
+  profile:
+    show:
+      take_part_event: 'Bierzesz udział w poniższych wydarzeniach:'
+      creted_events: 'Wydarzenia, które stworzyłeś\aś:'
+      save_changes: 'Zapisz zmianę'
   
