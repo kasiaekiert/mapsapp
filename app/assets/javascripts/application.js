@@ -18,3 +18,7 @@
 //= require jquery3
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(function () {
+  $('#datetimepicker1').datetimepicker();
+});

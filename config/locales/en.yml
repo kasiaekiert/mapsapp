@@ -108,6 +108,8 @@ en:
       prohibited_event: 'prohibites to create an event'
       error: 'Error'
       you_are_member: 'You are a member of this event'
+    edit:
+      edit_event: 'Editing Event'
 
   profile:
     show:
