@@ -29,7 +29,7 @@
   </p>
 
   <div class="container float-right">
-    <% if @event.user == current_user %>
+    <% if can? :manage, @event %>
       <%= link_to t('links.edit'), edit_event_path(@event) %> |
     <% end %>
       <%= link_to t('links.back'), events_path %> |
