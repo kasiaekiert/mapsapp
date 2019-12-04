@@ -14,12 +14,12 @@
 
     <div class="form-group">
       <%= form.label Place.human_attribute_name("name") %>
-      <input type="name" class="form-control" %>
+      <%= form.text_field(:name, class: "form-control" )%>
     </div>
 
     <div class="form-group">
       <%= form.label Place.human_attribute_name("adres") %>
-      <input type="address" class="form-control" %>
+      <%= form.text_field(:address, class: "form-control" )%>
     </div>
 
     <div>
