@@ -26,22 +26,15 @@
     <%= form.datetime_local_field :started_at %>
   </div>
 
-<!--
-  <div class="field">
-    <%= form.label :place %>
-    <%= form.select :place_id, options_from_collection_for_select(Place.all, :id, :full_adress)%>
-  </div>
-  -->
-  <%= form.fields_for :place_attibutes, event.place do |place_form| %>
+  <% if event.new_record?%>
     <div class="field">
-      <%= place_form.label Place.human_attribute_name("name") %>
-      <%= place_form.text_field :name %>
+      <%= form.label :place %>
+      <%= form.select :place_id, options_from_collection_for_select(Place.all, :id, :full_adress)%>
     </div>
-
-    <div class="field">
-      <%= place_form.label Place.human_attribute_name("adres") %>
-      <%= place_form.text_area :address %>
-    </div>  
+  <% else %>
+    <%= form.fields_for :place_attributes, event.place do |place_form| %>
+      <%= render 'places/input_fields', place_form: place_form %>
+    <% end %>
   <% end %>
 
   <div class="actions">
