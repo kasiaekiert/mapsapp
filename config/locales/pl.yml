@@ -10,6 +10,7 @@ pl:
         duration: 'Czas trwania'
         started_at: 'Początek'
         place: 'Miejsce'
+
       place: 
         name: 'Nazwa'
         adres: 'Adres'
@@ -40,6 +41,10 @@ pl:
     back: 'Powrót'
     destroy: 'Usuń'
     show_me_places: 'Pokaż mi miejsca'
+    destroy: 'Usuń'
+    edit: 'Zmień'
+    show: 'Pokaż szczegóły'
+    add_me: 'Dodaj mnie do wydarzenia'
 
   layouts:
     navbar:
@@ -61,14 +66,10 @@ pl:
       places_destroy: 'Miejscówka usunięta'
     new:
       new_place: 'Nowa miejscówka'
-      back: "Powrót"
     edit: 
       editplace: 'Zmień informacje o miejscówce:'
     index: 
       showmeevents: 'Najbliższe wydarzenia'
-      show: 'Poznaj bliżej »'
-      edit: 'Popraw'
-      destroy: 'Usuń'
       newplace: 'Dodaj nowe miejsce'
       title: 'Zaplanuj swoje sportowe wyzwanie'
       second_title: 'Sport jest Twoją pasją? Szukasz aktywności którą pokochasz?'
@@ -89,14 +90,14 @@ pl:
       event_destroy: 'Wydarzenie zostało usunięte'
     index: 
       events: 'Wydarzenia'
-      show: 'Dowiedz się więcej'
       name: 'Nazwa'
       author: 'Autor'
       description: 'Opis wydarzenia'
       show_places: 'Pokaż miejsca'
+      new_event: 'Dodaj nowe wydarzenie'
+      you_are_member: 'Jesteś uczestnikiem'
     new:
       new_event: 'Nowe wydarzenie'
-      back: 'Powrót'
     show:
       users_of_events: 'Lista osób biorących udział w wydarzeniu:'
   
