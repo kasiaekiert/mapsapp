@@ -53,6 +53,7 @@ pl:
       home: 'Strona główna'
       events: 'Wydarzenia'
       places: 'Miejsca'
+      profile: 'Ustawienia użytkownika'
     footer: 
       copyright: 'Prawa autorskie'
       mappapp: 'MappApp'
@@ -100,4 +101,10 @@ pl:
       new_event: 'Nowe wydarzenie'
     show:
       users_of_events: 'Lista osób biorących udział w wydarzeniu:'
+      
+  profile:
+    show:
+      take_part_event: 'Bierzesz udział w poniższych wydarzeniach:'
+      creted_events: 'Wydarzenia, które stworzyłeś\aś:'
+      save_changes: 'Zapisz zmianę'
   

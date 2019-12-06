@@ -1,6 +1,8 @@
-<h1> <%= t('.editplace') %></h1>
+<div class="container">
+  <h1> <%= t('.editplace') %></h1>
 
-<%= render 'form', place: @place %>
+  <%= render 'form', place: @place %>
 
-<%= link_to t('links.edit'), @place %> |
-<%= link_to t('links.back'), places_path %>
+  <%= link_to t('links.edit'), @place %> |
+  <%= link_to t('links.back'), places_path %>
+</div>

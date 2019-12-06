@@ -42,6 +42,8 @@ en:
       home: 'Home'
       events: 'Events'
       places: 'Places'
+      profile: 'User Settings' 
+
     footer: 
       copyright: 'Copyright'
       mappapp: 'MappApp'
@@ -104,7 +106,14 @@ en:
     registration: 
       new:
         password_new: 'New password'
-
+        
   setting:
     view: 
       locale: 'Locale'
+      
+    profile:
+      show:
+        take_part_event: 'You take part in:'
+        creted_events: 'You created these events:'
+        save_changes: 'Save my change'
+
