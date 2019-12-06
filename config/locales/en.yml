@@ -19,11 +19,21 @@ en:
           attributes:
             name:
               too_short_name: "is too short (minimum %{count} chars)"
+  controller: 
+    application-controller:
+      alert: 'You have no access here'
+    setting_controller:
+      flash_message:
+        alert-info: Your setting was successfully updated.
 
   links:
     edit: 'Edit'
     back: 'Back'
     show_me_places: 'Show me places'
+    destroy: 'Destroy'
+    edit: 'Edit'
+    show: 'Show'
+    add_me: 'Add me to the event'
 
   layouts:
     navbar:
@@ -38,6 +48,10 @@ en:
       copyright: 'Copyright'
       mappapp: 'MappApp'
 
+  profile:
+    show:
+      take_part: 'You are going to take part in:'
+      created_events: 'Events created by you:'
   places:
     create:
       places_create: 'Place was successfully created.'
@@ -47,30 +61,25 @@ en:
       places_destroy: 'Place was successfully deleyed.'
     new:
       new_place: 'New Place'
-      back: "Back"
     show:
       name: 'Name'
       adres: 'Address'
 
     index: 
-      showmeevents: 'Show me events'
-      show: 'Show »'
-      edit: 'Edit'
-      destroy: 'Destroy'
+      showmeevents: 'Show me events'    
       newplace: 'Create new place'
       title: 'Sports challenges, events, parties'
       second_title: 'Do you love sport? Or maybe you are looking for new activity?'
       third_title: 'Look for the most important sports events in your area, meet local sport freaks.'
-  
+  application_helper:
+    alert-info: 'Alert ERROR'
   events:
     create:
       event_success: 'New event created'
     update:
-      event_update: 'event was successfully updated'
+      event_update: 'Event was successfully updated'
     destroy:
       event_destroy: 'Event destroyed'
-    new:
-      back: 'Back'
     index: 
       events: 'Events'
       show: 'Get to know more'
@@ -78,6 +87,8 @@ en:
       author: 'Author'
       description: 'Description'
       show_places: 'Show places in my area'
+      new_event: 'Add new event'
+      you_are_member: 'You are a member'
     show:
       users_of_events: 'List of users of this event:'
 
@@ -95,13 +106,14 @@ en:
     registration: 
       new:
         password_new: 'New password'
-
+        
   setting:
     view: 
       locale: 'Locale'
-
+      
     profile:
       show:
         take_part_event: 'You take part in:'
         creted_events: 'You created these events:'
         save_changes: 'Save my change'
+

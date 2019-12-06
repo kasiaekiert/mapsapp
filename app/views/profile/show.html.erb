@@ -13,13 +13,14 @@
   <br>
 
   <h2> <%= t('.take_part_event') %> </h2>
+  <h3><%= t('.take_part') %></h3>
   <ul>
     <% @user.events.each do |event| %>
       <li> <%= link_to event.name, event_path(event) %> </li>
     <% end %>
   </ul>
 
-  <h2> <%= t('.creted_events') %> </h2>
+  <h3><%= t('.created_events') %></h3>
   <ul>
     <% @user.owned_events.each do |event| %>
       <li> <%= link_to event.name, event_path(event) %> </li>
