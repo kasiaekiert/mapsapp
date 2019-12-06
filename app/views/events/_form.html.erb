@@ -3,28 +3,28 @@
     <div id="error_explanation">
       <h2><%= pluralize(event.errors.count, t('.error')) %> <%= t('.prohibited_event') %></h2>
 
-      <ul>
-      <% event.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% event.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name %>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+    <div class="field">
+      <%= form.label :duration %>
+      <%= form.text_field :duration %>
+    </div>
 
-  <div class="field">
-    <%= form.label :duration %>
-    <%= form.text_field :duration %>
-  </div>
-
-  <div class="field">
-    <%= form.label :started_at %>
-    <%= form.datetime_local_field :started_at %>
-  </div>
+    <div class="field">
+      <%= form.label :started_at %>
+      <%= form.datetime_local_field :started_at %>
+    </div>
 
   <% if event.new_record?%>
     <div class="field">
@@ -37,7 +37,8 @@
     <% end %>
   <% end %>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>
