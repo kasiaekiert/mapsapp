@@ -2,9 +2,8 @@ pl:
   activerecord:
     models:
       event: 'Wydarzenie'
-      place: 'Miejscówka'
+      place: 'Miejsce'
       setting: 'Ustawienia'
-
     attributes:
       event: 
         name: 'Nazwa'
@@ -24,9 +23,23 @@ pl:
             name:
               too_short_name: 'jest za krótka'
 
+  application_helper:
+    alert-info: 'Uwaga błąd!'  
+
+  controller: 
+    application-controller:
+      alert: 'Nie masz tu dostępu'          
+
+  profile:
+    show:
+      take_part: 'Zamierzasz wziąć udział w wydarzeniach:'
+      created_events: 'Wydarzenia stworzone przez ciebie:'     
+
+
   links:
     edit: 'Edytuj'
     back: 'Powrót'
+    destroy: 'Usuń'
     show_me_places: 'Pokaż mi miejsca'
     destroy: 'Usuń'
     edit: 'Zmień'
@@ -63,6 +76,10 @@ pl:
       third_title: 'Nieistotne co Tobą kieruje! Znajdź, zaplanuj i odwiedź najważniejsze sportowe wydarzenia w swojej okolicy!'
       indexplace: 'Miejscówki'
       showevents: 'Pokaż mi wydarzenia'
+    show:
+      name: 'Nazwa'
+      adres: 'Adres'
+    
 
   events:
     create:

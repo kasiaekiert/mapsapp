@@ -16,7 +16,10 @@
           <td><%= event.name %></td>
           <td><%= event.duration %></td>
           <td><%= event.started_at %></td>
-          <td><%= link_to t('links.show'), event %></td>
+          <td><%= link_to '<%= t('.setting_updated')%>', event %></td>
+          <td>
+            <% if can? :manage, event %>
+              <%= link_to "<%= t('.show')%>", edit_event_path(event) %>
           <td>
             <% if event.has_member?(current_user) %>
               <%= t('.you_are_member') %>
