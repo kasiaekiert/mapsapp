@@ -1,5 +1,4 @@
 class MembersController < ApplicationController
-
   def create
     event = Event.find(params[:event_id])
     event.members << current_user
