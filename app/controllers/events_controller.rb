@@ -1,7 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   before_action :check_authorization, only: [:edit, :update, :destroy]
-  before_action :event_status, only: [:index, :show]
 
   def index
     @events = Event.all
@@ -60,11 +59,6 @@ class EventsController < ApplicationController
       authorize! :manage, @event
     end
 
-    def event_status
-      @event.status == 'in_progress' if self.started_at == Time.now
-      @event.status == 'incomming' if self.started_at < Date.today
-      @event.status == 'finished' if self.started_at > Date.today
-    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
       params.require(:event).permit(:name, :started_at, :duration, :place_id, place_attributes: [:name, :address])
