@@ -93,6 +93,7 @@ en:
       show_places: 'Show places in my area'
       new_event: 'Add new event'
       you_are_member: 'You are a member'
+      event_status: 'Status'
     new:
       new_event: 'New event'
     show:

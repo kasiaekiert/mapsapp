@@ -93,6 +93,7 @@ pl:
       show_places: 'Pokaż miejsca'
       new_event: 'Dodaj nowe wydarzenie'
       you_are_member: 'Jesteś uczestnikiem'
+      event_status: 'Status wydarzenia'
     new:
       new_event: 'Nowe wydarzenie'
     show:

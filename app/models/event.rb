@@ -5,7 +5,6 @@ class Event < ApplicationRecord
   accepts_nested_attributes_for :place
 
   validates :name, name_lenght: { minimum: 5 }
-  enum status: [:incomming, :in_progress, :finished]
 
   def has_member?(user)
     members.include?(user)
@@ -15,6 +14,6 @@ class Event < ApplicationRecord
     return '' unless self.started_at
     return 'in_progress' if self.started_at == Time.now
     return 'incomming' if self.started_at > Date.today
-    return 'finished' if self.started_at > Date.today
+    return 'finished' if self.started_at < Date.today
   end
 end

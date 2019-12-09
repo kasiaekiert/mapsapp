@@ -1,5 +1,10 @@
 <div class="container">
   <p>
+    <strong><%= t('.event_status') %> </strong>
+    <%= @event.event_status %>
+  </p>
+
+  <p>
     <strong><%= Event.human_attribute_name(:name) %> </strong>
     <%= @event.name %>
   </p>
