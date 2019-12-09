@@ -5,6 +5,7 @@ class Event < ApplicationRecord
   accepts_nested_attributes_for :place
 
   validates :name, name_lenght: { minimum: 5 }
+  enum status: [:incomming, :in_progress, :finished]
 
   def has_member?(user)
     members.include?(user)
