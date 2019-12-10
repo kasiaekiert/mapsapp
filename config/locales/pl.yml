@@ -10,7 +10,6 @@ pl:
         duration: 'Czas trwania'
         started_at: 'Początek'
         place: 'Miejsce'
-
       place: 
         name: 'Nazwa'
         adres: 'Adres'
@@ -28,13 +27,7 @@ pl:
 
   controller: 
     application-controller:
-      alert: 'Nie masz tu dostępu'          
-
-  profile:
-    show:
-      take_part: 'Zamierzasz wziąć udział w wydarzeniach:'
-      created_events: 'Wydarzenia stworzone przez ciebie:'     
-
+      alert: 'Nie masz tu dostępu'   
 
   links:
     edit: 'Edytuj'
@@ -105,6 +98,6 @@ pl:
   profile:
     show:
       take_part_event: 'Bierzesz udział w poniższych wydarzeniach:'
-      creted_events: 'Wydarzenia, które stworzyłeś\aś:'
+      created_events: 'Wydarzenia, które stworzyłeś\aś:'
       save_changes: 'Zapisz zmianę'
   

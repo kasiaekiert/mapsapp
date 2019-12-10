@@ -48,10 +48,6 @@ en:
       copyright: 'Copyright'
       mappapp: 'MappApp'
 
-  profile:
-    show:
-      take_part: 'You are going to take part in:'
-      created_events: 'Events created by you:'
   places:
     create:
       places_create: 'Place was successfully created.'
@@ -111,9 +107,9 @@ en:
     view: 
       locale: 'Locale'
       
-    profile:
-      show:
-        take_part_event: 'You take part in:'
-        creted_events: 'You created these events:'
-        save_changes: 'Save my change'
+  profile:
+    show:
+      take_part_event: 'You take part in:'
+      created_events: 'You created these events:'
+      save_changes: 'Save my change'
 
