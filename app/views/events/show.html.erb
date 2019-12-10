@@ -18,7 +18,6 @@
     <% if @event.has_member?(current_user) %>
       <%= t('.you_are_member') %>
       <%= link_to t('.remove_me_from_event'), event_members_path(@event), method: :delete %>
-
     <% else %>
       <%= link_to t('.add_me'), event_members_path(@event), method: :post %>
     <% end %>
@@ -35,6 +34,10 @@
     <strong><%= Place.model_name.human %></strong>
     <%= @event.place.full_adress %>
   </p>
+
+  <% if can? :destroy, @event %>
+    <%= link_to 'Delete', @event, method: :delete, class: 'btn btn-danger' %>
+  <% end %>
 
   <%= link_to t('links.edit'), edit_event_path(@event) %> |
   <%= link_to t('links.back'), events_path %>
