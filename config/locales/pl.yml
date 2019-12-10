@@ -1,10 +1,13 @@
 pl:
   activerecord:
     models:
+      user: 'Użytkownik'
       event: 'Wydarzenie'
       place: 'Miejsce'
       setting: 'Ustawienia'
     attributes:
+      user:
+        login: "Handle"
       event: 
         name: 'Nazwa'
         duration: 'Czas trwania'
@@ -12,7 +15,7 @@ pl:
         place: 'Miejsce'
       place: 
         name: 'Nazwa'
-        adres: 'Adres'
+        address: 'Adres'
       setting:
         locale: 'Język obsługi:'
     errors:
@@ -21,18 +24,18 @@ pl:
           attributes:
             name:
               too_short_name: 'jest za krótka'
-
-  application_helper:
-    alert-info: 'Uwaga błąd!'  
-
   controller: 
     application-controller:
-      alert: 'Nie masz tu dostępu'   
+      alert: 'Nie masz tu dostępu'
+    setting_controller:
+      flash_message:
+        alert-info: 'Twoje ustawienia zostały zaktualizowane.'
+  application_helper:
+    alert-info: 'Uwaga błąd!'  
 
   links:
     edit: 'Edytuj'
     back: 'Powrót'
-    destroy: 'Usuń'
     show_me_places: 'Pokaż mi miejsca'
     destroy: 'Usuń'
     edit: 'Zmień'
@@ -70,11 +73,9 @@ pl:
       third_title: 'Nieistotne co Tobą kieruje! Znajdź, zaplanuj i odwiedź najważniejsze sportowe wydarzenia w swojej okolicy!'
       indexplace: 'Miejscówki'
       showevents: 'Pokaż mi wydarzenia'
-    show:
-      name: 'Nazwa'
-      adres: 'Adres'
+    form:
+      submit: 'Wyślij'
     
-
   events:
     create:
       event_success: 'Utworzono nowe wydarzenie'
@@ -84,6 +85,7 @@ pl:
       event_destroy: 'Wydarzenie zostało usunięte'
     index: 
       events: 'Wydarzenia'
+      show: 'Więcej...'
       name: 'Nazwa'
       author: 'Autor'
       description: 'Opis wydarzenia'
@@ -100,4 +102,3 @@ pl:
       take_part_event: 'Bierzesz udział w poniższych wydarzeniach:'
       created_events: 'Wydarzenia, które stworzyłeś\aś:'
       save_changes: 'Zapisz zmianę'
-  
