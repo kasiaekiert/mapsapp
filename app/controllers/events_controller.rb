@@ -1,5 +1,4 @@
 class EventsController < ApplicationController
-  before_action :set_places, only: [:new, :edit]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   before_action :check_authorization, only: [:edit, :update, :destroy]
 
@@ -52,10 +51,6 @@ class EventsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_places
-      @places = Place.all
-    end
-
     def set_event
       @event = Event.find(params[:id])
     end 
