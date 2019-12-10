@@ -10,5 +10,6 @@ class MembersController < ApplicationController
     event = Event.find(params[:event_id])
     event.member = current_user
     redirect_to event_members_path(event)
+    redirect_back(fallback_location: root_path)
   end 
 end

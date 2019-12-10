@@ -12,6 +12,6 @@ class ApplicationController < ActionController::Base
   private
 
   def unauthorized
-    redirect_to root_url, :alert => "You have no access here"
+    redirect_to root_url, :alert => "<%= t('.no_access')%>"
   end
 end

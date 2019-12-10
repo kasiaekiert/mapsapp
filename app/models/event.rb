@@ -1,7 +1,12 @@
 class Event < ApplicationRecord
   belongs_to :place 
   belongs_to :user
+<<<<<<< HEAD
   has_and_belongs_to_many :members, class_name: "User", dependent: :destroy 
+=======
+  has_and_belongs_to_many :members, class_name: "User"
+  accepts_nested_attributes_for :place
+>>>>>>> 8061266ad2cad7e517e5965faec4fc6a01cc1909
 
   validates :name, name_lenght: { minimum: 5 }
 

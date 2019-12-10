@@ -2,9 +2,8 @@ pl:
   activerecord:
     models:
       event: 'Wydarzenie'
-      place: 'Miejscówka'
+      place: 'Miejsce'
       setting: 'Ustawienia'
-
     attributes:
       event: 
         name: 'Nazwa'
@@ -24,10 +23,28 @@ pl:
             name:
               too_short_name: 'jest za krótka'
 
+  application_helper:
+    alert-info: 'Uwaga błąd!'  
+
+  controller: 
+    application-controller:
+      alert: 'Nie masz tu dostępu'          
+
+  profile:
+    show:
+      take_part: 'Zamierzasz wziąć udział w wydarzeniach:'
+      created_events: 'Wydarzenia stworzone przez ciebie:'     
+
+
   links:
     edit: 'Edytuj'
     back: 'Powrót'
+    destroy: 'Usuń'
     show_me_places: 'Pokaż mi miejsca'
+    destroy: 'Usuń'
+    edit: 'Zmień'
+    show: 'Pokaż szczegóły'
+    add_me: 'Dodaj mnie do wydarzenia'
 
   layouts:
     navbar:
@@ -49,20 +66,20 @@ pl:
       places_destroy: 'Miejscówka usunięta'
     new:
       new_place: 'Nowa miejscówka'
-      back: "Powrót"
     edit: 
       editplace: 'Zmień informacje o miejscówce:'
     index: 
       showmeevents: 'Najbliższe wydarzenia'
-      show: 'Poznaj bliżej »'
-      edit: 'Popraw'
-      destroy: 'Usuń'
       newplace: 'Dodaj nowe miejsce'
       title: 'Zaplanuj swoje sportowe wyzwanie'
       second_title: 'Sport jest Twoją pasją? Szukasz aktywności którą pokochasz?'
       third_title: 'Nieistotne co Tobą kieruje! Znajdź, zaplanuj i odwiedź najważniejsze sportowe wydarzenia w swojej okolicy!'
       indexplace: 'Miejscówki'
       showevents: 'Pokaż mi wydarzenia'
+    show:
+      name: 'Nazwa'
+      adres: 'Adres'
+    
 
   events:
     create:
@@ -73,18 +90,14 @@ pl:
       event_destroy: 'Wydarzenie zostało usunięte'
     index: 
       events: 'Wydarzenia'
-      show: 'Dowiedz się więcej'
       name: 'Nazwa'
       author: 'Autor'
       description: 'Opis wydarzenia'
       show_places: 'Pokaż miejsca'
       new_event: 'Dodaj nowe wydarzenie'
-      destroy: 'Usuń'
-      edit: 'Zmień'
-      show: 'Pokaż szczegóły'
+      you_are_member: 'Jesteś uczestnikiem'
     new:
       new_event: 'Nowe wydarzenie'
-      back: 'Powrót'
     show:
       users_of_events: 'Lista osób biorących udział w wydarzeniu:'
   

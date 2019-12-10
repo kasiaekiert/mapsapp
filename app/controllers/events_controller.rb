@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_places, only: [:new, :edit]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-  before_action :check_authorization, only: [:edit, :update, :destroy, :add_me]
+  before_action :check_authorization, only: [:edit, :update, :destroy]
 
   def index
     @events = Event.all 
@@ -53,7 +53,7 @@ class EventsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_places
-      @place = Place.all
+      @places = Place.all
     end
 
     def set_event
@@ -66,6 +66,6 @@ class EventsController < ApplicationController
     
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:name, :started_at, :duration, :place_id)
+      params.require(:event).permit(:name, :started_at, :duration, :place_id, place_attributes: [:name, :address])
     end
 end
