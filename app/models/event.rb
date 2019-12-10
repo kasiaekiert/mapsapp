@@ -3,7 +3,7 @@
 class Event < ApplicationRecord
   belongs_to :place
   belongs_to :user
-  has_and_belongs_to_many :members, class_name: 'User'
+  has_and_belongs_to_many :members, class_name: 'User', dependent: :destroy
   accepts_nested_attributes_for :place
   scope :sort_by_start_time, -> { order(started_at: :desc) }
 

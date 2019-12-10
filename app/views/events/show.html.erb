@@ -43,8 +43,9 @@
   <div class="container float-right">
     <% if can? :manage, @event %>
       <%= link_to t('links.edit'), edit_event_path(@event) %> |
+      <%= link_to t('links.delete'), @event, method: :delete, class: 'btn btn-danger' %>
     <% end %>
-      <%= link_to t('links.back'), events_path %> |
-      <%= link_to t('links.show_me_places'), places_path %>
+    <%= link_to t('links.back'), events_path %> |
+    <%= link_to t('links.show_me_places'), places_path %>
   </div>
 </div>
