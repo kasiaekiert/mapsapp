@@ -1,7 +1,7 @@
 <div class="container">
   <h1><%= t('.new_event') %></h1>
 
-  <%= render 'form', event: @event %>
+  <%= render 'form', event: @event, places: Place.all %>
 
   <%= link_to t('.back'), events_path %>
 </div>

@@ -29,7 +29,7 @@
   <% if event.new_record?%>
     <div class="field">
       <%= form.label :place %>
-      <%= form.select :place_id, options_from_collection_for_select(Place.all, :id, :full_adress)%>
+      <%= form.select :place_id, options_from_collection_for_select(places, :id, :full_adress)%>
     </div>
   <% else %>
     <%= form.fields_for :place_attributes, event.place do |place_form| %>
