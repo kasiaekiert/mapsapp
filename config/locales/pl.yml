@@ -66,7 +66,6 @@ pl:
     edit: 
       editplace: 'Zmień informacje o miejscówce:'
     index: 
-      showmeevents: 'Najbliższe wydarzenia'
       newplace: 'Dodaj nowe miejsce'
       title: 'Zaplanuj swoje sportowe wyzwanie'
       second_title: 'Sport jest Twoją pasją? Szukasz aktywności którą pokochasz?'

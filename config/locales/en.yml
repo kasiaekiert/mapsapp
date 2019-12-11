@@ -66,7 +66,6 @@ en:
     edit: 
       editplace: 'Edit info about place:'
     index: 
-      showmeevents: 'Show me events'    
       newplace: 'Create new place'
       title: 'Sports challenges, events, parties'
       second_title: 'Do you love sport? Or maybe you are looking for new activity?'
