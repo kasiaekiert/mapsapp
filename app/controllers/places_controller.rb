@@ -25,8 +25,7 @@ class PlacesController < ApplicationController
   # POST /places
   # POST /places.json
   def create
-    @place = Place.new(place_params)
-    @place.creator = current_user
+    @place = Place.new(place_params.merge(user_id: current_user.id))
     respond_to do |format|
       if @place.save
         format.html { redirect_to @place, notice: t('.place_created') }
@@ -70,6 +69,6 @@ class PlacesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def place_params
-      params.require(:place).permit(:name, :address).merge(user: @current_user)
+      params.require(:place).permit(:name, :address)
     end
 end
