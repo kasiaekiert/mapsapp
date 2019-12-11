@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :set_places, only: [:new, :edit]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   before_action :check_authorization, only: [:edit, :update, :destroy]
-
+  
   def index
     @events = Event.all 
   end
@@ -62,6 +62,14 @@ class EventsController < ApplicationController
 
     def check_authorization
       authorize! :manage, @event
+    end
+
+    def notice_before_remove(event)
+      if @event.has_member?
+        flash[:notice] = "There are some members in your event. Are you sure that you want to remove it?"
+      else
+        flash[:notice] = "Are you sure?"
+      end
     end
     
     # Never trust parameters from the scary internet, only allow the white list through.
