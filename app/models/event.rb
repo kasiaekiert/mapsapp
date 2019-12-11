@@ -10,7 +10,7 @@ class Event < ApplicationRecord
     members.include?(user)
   end
 
-  def event_status
+  def status
     return '' unless self.started_at
     return 'in_progress' if self.started_at == Time.now
     return 'incomming' if self.started_at > Date.today

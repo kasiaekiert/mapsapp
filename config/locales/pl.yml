@@ -7,12 +7,13 @@ pl:
       setting: 'Ustawienia'
     attributes:
       user:
-        login: "Handle"
+        login: "Login"
       event: 
         name: 'Nazwa'
         duration: 'Czas trwania'
         started_at: 'Początek'
         place: 'Miejsce'
+        status: 'Status wydarzenia'
       place: 
         name: 'Nazwa'
         address: 'Adres'
