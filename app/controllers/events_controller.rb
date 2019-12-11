@@ -66,12 +66,11 @@ class EventsController < ApplicationController
 
     def notice_before_remove(event)
       if @event.has_member?
-        flash[:notice] = "There are some members in your event. Are you sure that you want to remove it?"
+        flash[:notice] = 'There are some members in your event. Are you sure that you want to remove it?'
       else
-        flash[:notice] = "Are you sure?"
+        flash[:notice] = 'Are you sure?'
       end
     end
-    
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
       params.require(:event).permit(:name, :started_at, :duration, :place_id, place_attributes: [:name, :address])
