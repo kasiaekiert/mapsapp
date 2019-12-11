@@ -56,7 +56,7 @@ pl:
 
   places:
     create:
-      places_create: 'Miejscówka została utworzona'
+      place_created: 'Miejscówka została utworzona'
     update:
       places_update: 'Miejscówka uaktualniona'
     destroy:  
@@ -73,6 +73,7 @@ pl:
       third_title: 'Nieistotne co Tobą kieruje! Znajdź, zaplanuj i odwiedź najważniejsze sportowe wydarzenia w swojej okolicy!'
       indexplace: 'Miejscówki'
       showevents: 'Pokaż mi wydarzenia'
+      sure: 'Jesteś pewien/pewna, że chcesz usunąć dane miejsce?'
     form:
       submit: 'Wyślij'
     
