@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   before_action :check_authorization, only: [:edit, :update, :destroy]
-
+  
   def index
     @events = Event.sort_by_start_time
   end
@@ -53,7 +53,7 @@ class EventsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_event
       @event = Event.find(params[:id])
-    end 
+    end
 
     def check_authorization
       authorize! :manage, @event
