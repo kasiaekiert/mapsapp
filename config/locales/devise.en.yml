@@ -36,6 +36,8 @@ en:
       send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
       updated: "Your password has been changed successfully. You are now signed in."
       updated_not_active: "Your password has been changed successfully."
+      edit:
+        change_password: 'Change your password'
       new:
         reset_password_instructions: 'Send me reset password instructions'
         devise:
