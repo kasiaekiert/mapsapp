@@ -56,7 +56,7 @@ en:
 
   places:
     create:
-      places_create: 'Place was successfully created.'
+      place_created: 'Place was successfully created.'
     update:
       places_update: 'Place was successfully updated.'
     destroy:  
@@ -72,6 +72,7 @@ en:
       third_title: 'Look for the most important sports events in your area, meet local sport freaks.'
       indexplace: 'Show places'
       showevents: 'Show me events'
+      sure: 'Are you sure that you want to delete it?'
     form:
       submit: 'Submit'
 
