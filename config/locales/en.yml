@@ -96,7 +96,9 @@ en:
       new_event: 'New event'
     show:
       users_of_events: 'List of users of this event:'
-
+    form:
+      prohibited_event: 'prohibites to create an event'
+      error: 'Error'
   profile:
     show:
       take_part_event: 'You take part in:'

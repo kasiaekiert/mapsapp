@@ -96,7 +96,9 @@ pl:
       new_event: 'Nowe wydarzenie'
     show:
       users_of_events: 'Lista osób biorących udział w wydarzeniu:'
-      
+    form:
+      prohibited_event: 'utrudnia utworzenie wydarzenia'
+      error: 'Błąd'
   profile:
     show:
       take_part_event: 'Bierzesz udział w poniższych wydarzeniach:'
