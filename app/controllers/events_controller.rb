@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: [:create, :destroy]
   before_action :check_authorization, only: [:edit, :update, :destroy]
 
   def index
