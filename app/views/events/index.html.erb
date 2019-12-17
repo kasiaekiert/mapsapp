@@ -24,7 +24,7 @@
           <td>
             <% if event.has_member?(current_user) %>
               <%= t('.you_are_member') %>
-              <%= link_to t('links.destroy_me'), event_members_path(event), method: :destroy %>
+              <%= link_to t('links.delete_me'), event_members_path(event), method: :delete %>
             <% else %>
               <%= link_to t('links.add_me'), event_members_path(event), method: :post %>
             <% end %>

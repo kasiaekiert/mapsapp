@@ -41,6 +41,7 @@ en:
     edit: 'Edit'
     show: 'Show'
     add_me: 'Add me to the event'
+    delete_me: 'Delete me from event'
 
   layouts:
     navbar:
@@ -96,6 +97,7 @@ en:
       new_event: 'New event'
     show:
       users_of_events: 'List of users of this event:'
+      you_are_member: 'You are a member of this event'
 
   profile:
     show:

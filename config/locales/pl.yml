@@ -41,6 +41,7 @@ pl:
     edit: 'Zmień'
     show: 'Pokaż szczegóły'
     add_me: 'Dodaj mnie do wydarzenia'
+    delete_me: 'Usuń mnie z wydarzenia'
 
   layouts:
     navbar:
@@ -96,6 +97,7 @@ pl:
       new_event: 'Nowe wydarzenie'
     show:
       users_of_events: 'Lista osób biorących udział w wydarzeniu:'
+      you_are_member: 'Bierzesz udział w tym wydarzeniu'
       
   profile:
     show:

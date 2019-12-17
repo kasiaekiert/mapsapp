@@ -7,11 +7,7 @@ class MembersController < ApplicationController
 
   def destroy
     event = Event.find(params[:event_id])
-    event.members = current_user
-    members.event.destroy(current_user)
-    respond_to do |format|
-      format.html { redirect_to events_path, notice: t('.member_destroy') }
-      format.json { head :no_content }
-    end
+    event.members.destroy(current_user)
+    redirect_back(fallback_location: root_path)
   end
 end
