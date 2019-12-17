@@ -24,13 +24,14 @@
           <td>
             <% if event.has_member?(current_user) %>
               <%= t('.you_are_member') %>
+              <%= link_to t('links.destroy_me'), event_members_path(event), method: :destroy %>
             <% else %>
               <%= link_to t('links.add_me'), event_members_path(event), method: :post %>
             <% end %>
           </td>
           <td>
             <% if can? :manage, event %>
-              <%= link_to t('links.destroy'), event, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to t('links.destroy'), event, method: :destroy, data: { confirm: 'Are you sure?' } %>
             <% end %>
           </td>
         </tr>
