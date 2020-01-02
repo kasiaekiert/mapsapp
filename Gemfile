@@ -44,6 +44,7 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 
 gem 'rails-i18n', '~> 5.1', '>= 5.1.3'
+gem 'rubocop-performance', '~> 0.0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -53,7 +54,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8'
   gem 'rubocop', require: false
   gem 'reek', '~> 4.7', '>= 4.7.2'
-  gem 'rubocop-performance'
   gem 'pg', '>= 0.18', '< 2.0'
   gem 'rubycritic', require: false
 end
