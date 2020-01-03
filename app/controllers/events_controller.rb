@@ -4,8 +4,8 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all.order(started_at: :desc)
-  end 
-  
+  end
+
   def show
   end
 
