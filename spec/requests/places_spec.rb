@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe "Places", type: :request do
+RSpec.describe "Main page", type: :request do
   describe "GET /places" do
-    it "works! (now write some real specs)" do
+    it "if you go to main page you have to sign in" do
       get places_path
-      expect(response).to have_http_status(200)
+      expect(response).to redirect_to('/users/sign_in')
     end
   end
 end
