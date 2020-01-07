@@ -44,7 +44,6 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 
 gem 'rails-i18n', '~> 5.1', '>= 5.1.3'
-gem 'rubocop-performance', '~> 0.0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -55,6 +54,7 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'reek', '~> 4.7', '>= 4.7.2'
   gem 'pg', '>= 0.18', '< 2.0'
+  gem 'rubocop-performance', '~> 0.0.1'
   gem 'rubycritic', require: false
 end
 
@@ -70,9 +70,9 @@ group :development do
 end
 
 
-group :production do 
+group :production do
   gem 'pg', '>= 0.18', '< 2.0'
-end 
+end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
