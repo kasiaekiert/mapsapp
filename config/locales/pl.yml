@@ -116,3 +116,7 @@ pl:
       take_part_event: 'Bierzesz udział w poniższych wydarzeniach:'
       created_events: 'Wydarzenia, które stworzyłeś\aś:'
       save_changes: 'Zapisz zmianę'
+
+  settings:
+    update:
+      alert-info: 'Zostało zaktualizowane'
