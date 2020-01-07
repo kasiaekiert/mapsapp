@@ -7,12 +7,13 @@ pl:
       setting: 'Ustawienia'
     attributes:
       user:
-        login: "Handle"
+        login: "Login"
       event: 
         name: 'Nazwa'
         duration: 'Czas trwania'
         started_at: 'Początek'
         place: 'Miejsce'
+        status: 'Status wydarzenia'
       place: 
         name: 'Nazwa'
         address: 'Adres'
@@ -42,6 +43,11 @@ pl:
     show: 'Pokaż szczegóły'
     add_me: 'Dodaj mnie do wydarzenia'
     delete_me: 'Usuń mnie z wydarzenia'
+
+  statuses:
+    incomming: 'Nadchodzący'
+    in_progress: 'W trakcie'
+    finished: 'Zakończony'
 
   layouts:
     navbar:
@@ -93,6 +99,7 @@ pl:
       show_places: 'Pokaż miejsca'
       new_event: 'Dodaj nowe wydarzenie'
       you_are_member: 'Jesteś uczestnikiem'
+      event_status: 'Status wydarzenia'
     new:
       new_event: 'Nowe wydarzenie'
     show:
