@@ -15,5 +15,6 @@ class Event < ApplicationRecord
     return :incomming if started_at > Time.current
     return :in_progress if Time.current.between?(started_at, started_at+duration.hours)
     return :finished if started_at < Time.current + duration.hours
-  end
+    end
+    
 end

@@ -7,6 +7,11 @@ class EventsController < ApplicationController
   end
 
   def show
+    case event.status
+    when :incomming then 'incomming'
+    when :in_progress then 'in_progress'
+    when :finished then 'finished'
+  end 
   end
 
   def new
