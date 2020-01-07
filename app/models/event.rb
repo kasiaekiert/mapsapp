@@ -3,7 +3,7 @@ class Event < ApplicationRecord
   belongs_to :user
   has_and_belongs_to_many :members, class_name: "User"
   accepts_nested_attributes_for :place
-  default_scope { order(started_at: :desc) }
+  scope :sort_by_start_time, -> { order(started_at: :desc) }
 
   validates :name, name_lenght: { minimum: 5 }
   validates :started_at, :duration, presence: true
