@@ -1,7 +1,7 @@
 <div class="container">
   <p>
-    <strong><%= t('.status') %> </strong>
-    <%= @event.status %>
+    <strong><%= Event.human_attribute_name(:status) %></strong>
+    <span class="badge badge-secondary"><%= t("statuses.#{@event.status}") %></span>
   </p>
 
   <p>

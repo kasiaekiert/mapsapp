@@ -44,6 +44,11 @@ pl:
     add_me: 'Dodaj mnie do wydarzenia'
     delete_me: 'Usuń mnie z wydarzenia'
 
+  statuses:
+    incomming: 'Nadchodzący'
+    in_progress: 'W trakcie'
+    finished: 'Zakończony'
+
   layouts:
     navbar:
       logout: 'Wyloguj'
