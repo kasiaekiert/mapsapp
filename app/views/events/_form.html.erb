@@ -27,10 +27,16 @@
       <%= form.datetime_local_field :started_at %>
     </div>
 
+  <% if event.new_record?%>
     <div class="field">
       <%= form.label :place %>
-      <%= form.select :place_id, options_from_collection_for_select(Place.all, :id, :full_adress)%>
+      <%= form.select :place_id, options_from_collection_for_select(places, :id, :full_adress) %>
     </div>
+  <% else %>
+    <%= form.fields_for :place_attributes, event.place do |place_form| %>
+      <%= render 'places/input_fields', place_form: place_form %>
+    <% end %>
+  <% end %>
 
     <div class="actions">
       <%= form.submit %>

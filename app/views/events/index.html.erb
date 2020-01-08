@@ -6,6 +6,7 @@
         <th> <%= Event.human_attribute_name(:name) %> </th>
         <th><%= Event.human_attribute_name(:duration) %> </th>
         <th><%= Event.human_attribute_name(:started_at) %> </th>
+        <th><%= Event.human_attribute_name(:status) %> </th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -16,15 +17,23 @@
           <td><%= event.name %></td>
           <td><%= event.duration %></td>
           <td><%= event.started_at %></td>
-          <td><%= link_to 'Show', event %></td>
+          <td><span class="badge badge-secondary"><%= t("statuses.#{event.status}") %></span></td>
+          <td><%= link_to t('links.show'), event %></td>
           <td>
             <% if can? :manage, event %>
-              <%= link_to "Edit", edit_event_path(event) %>
+              <%= link_to t('links.edit'), edit_event_path(event) %>
+            <% end %>
+          <td>
+            <% if event.has_member?(current_user) %>
+              <%= t('.you_are_member') %>
+              <%= link_to t('links.delete_me'), event_members_path(event), method: :delete %>
+            <% else %>
+              <%= link_to t('links.add_me'), event_members_path(event), method: :post %>
             <% end %>
           </td>
           <td>
             <% if can? :manage, event %>
-              <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to t('links.destroy'), event, method: :delete, data: { confirm: 'Are you sure?' } %>
             <% end %>
           </td>
         </tr>

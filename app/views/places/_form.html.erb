@@ -2,7 +2,8 @@
   <%= form_with(model: place, local: true) do |form| %>
     <% if place.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(place.errors.count, "error") %> prohibited this place from being saved:</h2>
+        <h2><%= pluralize(place.errors.count, "error") %> 
+        <%= t('.prohibited') %> </h2>
 
         <ul>
         <% place.errors.full_messages.each do |message| %>
@@ -12,15 +13,7 @@
       </div>
     <% end %>
 
-    <div class="form-group">
-      <%= form.label Place.human_attribute_name("name") %>
-      <%= form.text_field(:name, class: "form-control" )%>
-    </div>
-
-    <div class="form-group">
-      <%= form.label Place.human_attribute_name("adres") %>
-      <%= form.text_field(:address, class: "form-control" )%>
-    </div>
+    <%= render 'input_fields', place_form: form %>
 
     <div class="action">
       <input type="submit" class="btn btn-primary mb-2"><%= t(".submit")%>

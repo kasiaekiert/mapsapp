@@ -1,11 +1,11 @@
 <div class="container">
   <p>
-    <strong> <%= t('.name') %> </strong>
+    <strong> <%= Place.human_attribute_name(:name) %> </strong>
     <%= @place.name %>
   </p>
 
   <p>
-    <strong> <%= t('.adres') %> </strong>
+    <strong> <%= Place.human_attribute_name(:address) %> </strong>
     <%= @place.address %>
   </p>
 

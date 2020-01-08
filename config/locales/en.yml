@@ -1,29 +1,53 @@
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   activerecord:
     models:
-      user: Customer
+      user: 'Customer'
       event: 'Event'
+      place: 'Place'
+      setting: 'Setting'
     attributes:
       user:
-        login: "Handle"
+        login: "Login"
       event: 
         name: 'Name'
         duration: 'Duration'
         started_at: 'Start at:'
+        place: 'Place'
+        status: 'Status'
+      place: 
+        name: 'Name'
+        address: 'Address'
+      setting:
+        locale: 'Locale:'
     errors:
       models:
         event:
           attributes:
             name:
               too_short_name: "is too short (minimum %{count} chars)"
+  controller: 
+    application-controller:
+      alert: 'You have no access here'
+    setting_controller:
+      flash_message:
+        alert-info: 'Your setting was successfully updated.'
+  application_helper:
+    alert-info: 'Error!'  
 
   links:
     edit: 'Edit'
     back: 'Back'
     show_me_places: 'Show me places'
+    destroy: 'Destroy'
+    edit: 'Edit'
+    show: 'Show'
+    add_me: 'Add me to the event'
+    delete_me: 'Delete me from event'
+
+  statuses:
+    incomming: 'Incomming'
+    in_progress: 'In progress'
+    finished: 'Finished'
 
   layouts:
     navbar:
@@ -33,44 +57,39 @@ en:
       events: 'Events'
       places: 'Places'
       profile: 'User Settings' 
-
     footer: 
       copyright: 'Copyright'
       mappapp: 'MappApp'
 
   places:
     create:
-      places_create: 'Place was successfully created.'
+      place_created: 'Place was successfully created.'
     update:
       places_update: 'Place was successfully updated.'
     destroy:  
       places_destroy: 'Place was successfully deleyed.'
     new:
       new_place: 'New Place'
-      back: "Back"
-    show:
-      name: 'Name'
-      adres: 'Address'
-
+    edit: 
+      editplace: 'Edit info about place:'
     index: 
-      showmeevents: 'Show me events'
-      show: 'Show »'
-      edit: 'Edit'
-      destroy: 'Destroy'
       newplace: 'Create new place'
       title: 'Sports challenges, events, parties'
       second_title: 'Do you love sport? Or maybe you are looking for new activity?'
       third_title: 'Look for the most important sports events in your area, meet local sport freaks.'
-  
+      indexplace: 'Show places'
+      showevents: 'Show me events'
+      sure: 'Are you sure that you want to delete it?'
+    form:
+      submit: 'Submit'
+
   events:
     create:
       event_success: 'New event created'
     update:
-      event_update: 'event was successfully updated'
+      event_update: 'Event was successfully updated'
     destroy:
       event_destroy: 'Event destroyed'
-    new:
-      back: 'Back'
     index: 
       events: 'Events'
       show: 'Get to know more'
@@ -78,30 +97,17 @@ en:
       author: 'Author'
       description: 'Description'
       show_places: 'Show places in my area'
+      new_event: 'Add new event'
+      you_are_member: 'You are a member'
+      event_status: 'Status'
+    new:
+      new_event: 'New event'
     show:
       users_of_events: 'List of users of this event:'
+      you_are_member: 'You are a member of this event'
 
-  device: 
-    sessions:
-      new:
-        login: 'Log in'
-        email_new: 'Email adress:'
-        password_new: 'Password:'
-      login: 'Login'
-    users:
-      sign_up: 'Sign up'
-      password:
-        new: 'Forgot your password?'
-    registration: 
-      new:
-        password_new: 'New password'
-
-  setting:
-    view: 
-      locale: 'Locale'
-
-    profile:
-      show:
-        take_part_event: 'You take part in:'
-        creted_events: 'You created these events:'
-        save_changes: 'Save my change'
+  profile:
+    show:
+      take_part_event: 'You take part in:'
+      created_events: 'You created these events:'
+      save_changes: 'Save my change'

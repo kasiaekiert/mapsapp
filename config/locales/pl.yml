@@ -1,19 +1,22 @@
 pl:
   activerecord:
     models:
+      user: 'Użytkownik'
       event: 'Wydarzenie'
-      place: 'Miejscówka'
+      place: 'Miejsce'
       setting: 'Ustawienia'
-
     attributes:
+      user:
+        login: "Login"
       event: 
         name: 'Nazwa'
         duration: 'Czas trwania'
         started_at: 'Początek'
         place: 'Miejsce'
+        status: 'Status wydarzenia'
       place: 
         name: 'Nazwa'
-        adres: 'Adres'
+        address: 'Adres'
       setting:
         locale: 'Język obsługi:'
     errors:
@@ -22,11 +25,29 @@ pl:
           attributes:
             name:
               too_short_name: 'jest za krótka'
+  controller: 
+    application-controller:
+      alert: 'Nie masz tu dostępu'
+    setting_controller:
+      flash_message:
+        alert-info: 'Twoje ustawienia zostały zaktualizowane.'
+  application_helper:
+    alert-info: 'Uwaga błąd!'  
 
   links:
     edit: 'Edytuj'
     back: 'Powrót'
     show_me_places: 'Pokaż mi miejsca'
+    destroy: 'Usuń'
+    edit: 'Zmień'
+    show: 'Pokaż szczegóły'
+    add_me: 'Dodaj mnie do wydarzenia'
+    delete_me: 'Usuń mnie z wydarzenia'
+
+  statuses:
+    incomming: 'Nadchodzący'
+    in_progress: 'W trakcie'
+    finished: 'Zakończony'
 
   layouts:
     navbar:
@@ -42,28 +63,26 @@ pl:
 
   places:
     create:
-      places_create: 'Miejscówka została utworzona'
+      place_created: 'Miejscówka została utworzona'
     update:
       places_update: 'Miejscówka uaktualniona'
     destroy:  
       places_destroy: 'Miejscówka usunięta'
     new:
       new_place: 'Nowa miejscówka'
-      back: "Powrót"
     edit: 
       editplace: 'Zmień informacje o miejscówce:'
     index: 
-      showmeevents: 'Najbliższe wydarzenia'
-      show: 'Poznaj bliżej »'
-      edit: 'Popraw'
-      destroy: 'Usuń'
       newplace: 'Dodaj nowe miejsce'
       title: 'Zaplanuj swoje sportowe wyzwanie'
       second_title: 'Sport jest Twoją pasją? Szukasz aktywności którą pokochasz?'
       third_title: 'Nieistotne co Tobą kieruje! Znajdź, zaplanuj i odwiedź najważniejsze sportowe wydarzenia w swojej okolicy!'
       indexplace: 'Miejscówki'
       showevents: 'Pokaż mi wydarzenia'
-
+      sure: 'Jesteś pewien/pewna, że chcesz usunąć dane miejsce?'
+    form:
+      submit: 'Wyślij'
+    
   events:
     create:
       event_success: 'Utworzono nowe wydarzenie'
@@ -73,22 +92,22 @@ pl:
       event_destroy: 'Wydarzenie zostało usunięte'
     index: 
       events: 'Wydarzenia'
-      show: 'Dowiedz się więcej'
+      show: 'Więcej...'
       name: 'Nazwa'
       author: 'Autor'
       description: 'Opis wydarzenia'
       show_places: 'Pokaż miejsca'
-      new_event: 'Stwórz nowe wydarzenie'
-
+      new_event: 'Dodaj nowe wydarzenie'
+      you_are_member: 'Jesteś uczestnikiem'
+      event_status: 'Status wydarzenia'
     new:
       new_event: 'Nowe wydarzenie'
-      back: 'Powrót'
     show:
       users_of_events: 'Lista osób biorących udział w wydarzeniu:'
+      you_are_member: 'Bierzesz udział w tym wydarzeniu'
       
   profile:
     show:
       take_part_event: 'Bierzesz udział w poniższych wydarzeniach:'
-      creted_events: 'Wydarzenia, które stworzyłeś\aś:'
+      created_events: 'Wydarzenia, które stworzyłeś\aś:'
       save_changes: 'Zapisz zmianę'
-  
