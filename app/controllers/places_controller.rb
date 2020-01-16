@@ -26,7 +26,7 @@ class PlacesController < ApplicationController
   # POST /places.json
   def create
     @place = Place.new(place_params.merge(user_id: current_user.id))
-    respond_to do |format|
+  
       if @place.save
         format.html { redirect_to @place, notice: t('.place_created') }
         format.json { render :show, status: :created, location: @place }
