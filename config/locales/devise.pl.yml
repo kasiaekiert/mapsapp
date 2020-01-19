@@ -30,6 +30,15 @@ pl:
       send_paranoid_instructions: "Jeżeli Twój adres istnieje w naszej bazie, otrzymasz za chwilę emaila z instrukcją zmiany hasła."
       updated: "Twoje hasło zostało zmienione. Zostałeś pomyślnie zalogowany."
       updated_not_active: "Twoje hasło zostało zmienione."
+      edit:
+        change_password: 'Zmień hasło'
+      new:
+        reset_password_instructions: 'Zresetuj moje hasło i wyslij instrukcje na email'
+          devise:
+            sessions:
+              users:
+                password:
+                  new: 'Zapomniałaś\eś hasła?'
     registrations:
       destroyed: "Do widzenia! Twoje konto zostało usunięte."
       signed_up: "Witaj! Zarejestrowałeś się pomyślnie."
