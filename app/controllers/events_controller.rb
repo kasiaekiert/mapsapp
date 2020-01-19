@@ -3,7 +3,7 @@ class EventsController < ApplicationController
   before_action :check_authorization, only: [:edit, :update, :destroy]
 
   def index
-    @events = Event.all 
+    @events = Event.sort_by_start_time
   end
 
   def show
@@ -58,7 +58,7 @@ class EventsController < ApplicationController
     def check_authorization
       authorize! :manage, @event
     end
-    
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
       params.require(:event).permit(:name, :started_at, :duration, :place_id, place_attributes: [:name, :address])

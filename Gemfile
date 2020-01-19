@@ -53,9 +53,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8'
   gem 'rubocop', require: false
   gem 'reek', '~> 4.7', '>= 4.7.2'
-  gem 'rubocop-performance'
+  gem 'rubocop-performance', '~> 0.0.1'  
   gem 'pg', '>= 0.18', '< 2.0'
-
   gem 'rubycritic', require: false
 end
 

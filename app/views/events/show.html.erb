@@ -1,5 +1,10 @@
 <div class="container">
   <p>
+    <strong><%= Event.human_attribute_name(:status) %></strong>
+    <span class="badge badge-secondary"><%= t("statuses.#{@event.status}") %></span>
+  </p>
+
+  <p>
     <strong><%= Event.human_attribute_name(:name) %> </strong>
     <%= @event.name %>
   </p>
@@ -16,9 +21,10 @@
 
   <p>
     <% if @event.has_member?(current_user) %>
-      <%= t('.you_are_member') %>
+      <%= t('.you_are_member') %> <br>
+      <%= link_to t('links.delete_me'), event_members_path(@event), method: :delete %> <br>
     <% else %>
-      <%= link_to t('links.add_me'), event_members_path(@event), method: :post %>
+      <%= link_to t('links.add_me'), event_members_path(@event), method: :post %><br>
     <% end %>
 
     <strong> <%= t('.users_of_events')%></strong>
