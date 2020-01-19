@@ -7,6 +7,5 @@ class NameLenghtValidator < ActiveModel::EachValidator
     return if name_size >= minimum
 
     record.errors.add(attribute, :too_short_name, count: minimum)
-    
   end
 end
