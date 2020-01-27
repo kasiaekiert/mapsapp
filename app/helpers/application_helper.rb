@@ -6,7 +6,7 @@ module ApplicationHelper
                     when 'success' then 'alert alert-success'
                     when 'error' then 'alert alert-danger'
                     when 'alert' then 'alert alert-warning'
-                    end 
+                    end
       content_tag :div, class: level_class do
        [ value, button_tag ].join('').html_safe
       end
