@@ -11,29 +11,25 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <label for="name"> <%= t('.name')%> </label>
-    <input type="text_field" class="form-control">
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
   </div>
 
-  <div class="form-group">
-    <label for="duration"> <%= t('.duration')%> </label>
-    <input type="text_field" class="form-control">
+  <div class="field">
+    <%= form.label :duration %>
+    <%= form.text_field :duration %>
   </div>
 
-  <div class="form-group">
-    <label for="started_at"> <%= t('.started_at')%> </label>
-    <div class='input-group date' id='datetimepicker1'>
-    <input type='text' class="form-control" />
-      <span class="input-group-addon">
-        <span class="glyphicon glyphicon-calendar"></span>
-      </span>
+  <div class="field">
+    <%= form.label :started_at %>
+    <%= form.datetime_local_field :started_at %>
   </div>
 
-  <% if event.new_record? %>
+  <% if event.new_record?%>
     <div class="field">
       <%= form.label :place %>
-      <%= form.select :place_id, options_from_collection_for_select(places, :id, :full_adress), class: "form-control" %>
+      <%= form.select :place_id, options_from_collection_for_select(places, :id, :full_adress)%>
     </div>
   <% else %>
     <%= form.fields_for :place_attributes, event.place do |place_form| %>
@@ -42,6 +38,6 @@
   <% end %>
 
   <div class="actions">
-    <button type="form.submit" class="btn btn-primary"> <%= t('.submit')%> </button>
+    <%= form.submit %>
   </div>
 <% end %>
