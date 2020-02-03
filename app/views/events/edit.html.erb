@@ -1,9 +1,11 @@
-<div class="container">
-  <h1>Editing Event</h1>
+<div class='container'>
+  <h1> <%= t('.edit_event')%> </h1>
 
   <%= render 'form', event: @event %>
-  
+
   <br>
-  <%= link_to t('links.show'), @event, class: 'btn btn-primary btn-sm' %>
-  <%= link_to t('links.back'), events_path %>
+  <div class="links_buttoms">
+    <%= link_to t('links.show'), @event, class: 'btn btn-primary btn-sm' %> 
+    <%= link_to t('links.back'), events_path %>
+  </div>
 </div>
