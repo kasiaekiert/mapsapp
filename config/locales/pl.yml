@@ -108,6 +108,7 @@ pl:
       prohibited_event: 'utrudnia utworzenie wydarzenia'
       error: 'Błąd'
       you_are_member: 'Bierzesz udział w tym wydarzeniu'
+
   profile:
     show:
       take_part_event: 'Bierzesz udział w poniższych wydarzeniach:'

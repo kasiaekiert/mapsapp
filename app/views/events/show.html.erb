@@ -22,11 +22,11 @@
   <p>
     <% if @event.has_member?(current_user) %>
       <%= t('.you_are_member') %> <br>
-      <%= link_to t('links.delete_me'), event_members_path(@event), method: :delete %> <br>
+      <%= link_to t('links.delete_me'), event_members_path(@event), class: 'btn btn-info', method: :delete %> <br>
     <% else %>
-      <%= link_to t('links.add_me'), event_members_path(@event), method: :post %><br>
+      <%= link_to t('links.add_me'), event_members_path(@event), class: 'btn btn-info', method: :post %><br>
     <% end %>
-
+    <br>
     <strong> <%= t('.users_of_events')%></strong>
     <ul>
       <% @event.members.each do |user| %>

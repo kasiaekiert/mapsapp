@@ -8,13 +8,13 @@ en:
     attributes:
       user:
         login: "Login"
-      event: 
+      event:
         name: 'Name'
         duration: 'Duration'
         started_at: 'Start at:'
         place: 'Place'
         status: 'Status'
-      place: 
+      place:
         name: 'Name'
         address: 'Address'
       setting:
@@ -25,14 +25,14 @@ en:
           attributes:
             name:
               too_short_name: "is too short (minimum %{count} chars)"
-  controller: 
+  controller:
     application-controller:
       alert: 'You have no access here'
     setting_controller:
       flash_message:
         alert-info: 'Your setting was successfully updated.'
   application_helper:
-    alert-info: 'Error!'  
+    alert-info: 'Error!'
 
   links:
     edit: 'Edit'
@@ -56,8 +56,8 @@ en:
       home: 'Home'
       events: 'Events'
       places: 'Places'
-      profile: 'User Settings' 
-    footer: 
+      profile: 'User Settings'
+    footer:
       copyright: 'Copyright'
       mappapp: 'MappApp'
 
@@ -66,13 +66,13 @@ en:
       place_created: 'Place was successfully created.'
     update:
       places_update: 'Place was successfully updated.'
-    destroy:  
+    destroy:
       places_destroy: 'Place was successfully deleyed.'
     new:
       new_place: 'New Place'
-    edit: 
+    edit:
       editplace: 'Edit info about place:'
-    index: 
+    index:
       newplace: 'Create new place'
       title: 'Sports challenges, events, parties'
       second_title: 'Do you love sport? Or maybe you are looking for new activity?'
@@ -90,7 +90,7 @@ en:
       event_update: 'Event was successfully updated'
     destroy:
       event_destroy: 'Event destroyed'
-    index: 
+    index:
       events: 'Events'
       show: 'Get to know more'
       name: 'Name'
