@@ -3,7 +3,7 @@ class EventsController < ApplicationController
   before_action :check_authorization, only: [:edit, :update, :destroy]
 
   def index
-    @events = Event.sort_by_start_time
+    @events = Event.includes(:members).sort_by_start_time
   end
 
   def show
