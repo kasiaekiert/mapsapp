@@ -320,7 +320,7 @@ DEPENDENCIES
   reek (~> 4.7, >= 4.7.2)
   rspec-rails (~> 3.8)
   rubocop
-  rubocop-performance
+  rubocop-performance (~> 0.0.1)
   rubycritic
   sass-rails (~> 5.0)
   spring
