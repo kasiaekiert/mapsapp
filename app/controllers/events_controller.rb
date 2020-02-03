@@ -30,8 +30,9 @@ class EventsController < ApplicationController
   end
 
   def update
+    place_attributes = event_params[:place_attributes].merge(user_id: current_user.id)
     respond_to do |format|
-      if @event.update(event_params)
+      if @event.update(event_params.merge(place_attributes: place_attributes))
         format.html { redirect_to @event, notice: t('.event_update') }
         format.json { render :show, status: :ok, location: @event }
       else
