@@ -54,7 +54,7 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'reek', '~> 4.7', '>= 4.7.2'
   gem 'pg', '>= 0.18', '< 2.0'
-  gem 'rubocop-performance', '~> 0.0.1'
+  gem 'rubocop-performance'
   gem 'rubycritic', require: false
 end
 
