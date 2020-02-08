@@ -8,13 +8,13 @@ pl:
     attributes:
       user:
         login: "Login"
-      event: 
+      event:
         name: 'Nazwa'
         duration: 'Czas trwania'
         started_at: 'Początek'
         place: 'Miejsce'
         status: 'Status wydarzenia'
-      place: 
+      place:
         name: 'Nazwa'
         address: 'Adres'
       setting:
@@ -25,14 +25,14 @@ pl:
           attributes:
             name:
               too_short_name: 'jest za krótka'
-  controller: 
+  controller:
     application-controller:
       alert: 'Nie masz tu dostępu'
     setting_controller:
       flash_message:
         alert-info: 'Twoje ustawienia zostały zaktualizowane.'
   application_helper:
-    alert-info: 'Uwaga błąd!'  
+    alert-info: 'Uwaga błąd!'
 
   links:
     edit: 'Edytuj'
@@ -57,7 +57,7 @@ pl:
       events: 'Wydarzenia'
       places: 'Miejsca'
       profile: 'Ustawienia użytkownika'
-    footer: 
+    footer:
       copyright: 'Prawa autorskie'
       mappapp: 'MappApp'
 
@@ -66,13 +66,13 @@ pl:
       place_created: 'Miejscówka została utworzona'
     update:
       places_update: 'Miejscówka uaktualniona'
-    destroy:  
+    destroy:
       places_destroy: 'Miejscówka usunięta'
     new:
       new_place: 'Nowa miejscówka'
-    edit: 
+    edit:
       editplace: 'Zmień informacje o miejscówce:'
-    index: 
+    index:
       newplace: 'Dodaj nowe miejsce'
       title: 'Zaplanuj swoje sportowe wyzwanie'
       second_title: 'Sport jest Twoją pasją? Szukasz aktywności którą pokochasz?'
@@ -82,15 +82,15 @@ pl:
       sure: 'Jesteś pewien/pewna, że chcesz usunąć dane miejsce?'
     form:
       submit: 'Wyślij'
-    
+
   events:
     create:
       event_success: 'Utworzono nowe wydarzenie'
-    update: 
+    update:
       event_update: 'Wydarzenie zostało uaktualnione'
     destroy:
       event_destroy: 'Wydarzenie zostało usunięte'
-    index: 
+    index:
       events: 'Wydarzenia'
       show: 'Więcej...'
       name: 'Nazwa'
@@ -104,8 +104,13 @@ pl:
       new_event: 'Nowe wydarzenie'
     show:
       users_of_events: 'Lista osób biorących udział w wydarzeniu:'
+    form:
+      prohibited_event: 'utrudnia utworzenie wydarzenia'
+      error: 'Błąd'
       you_are_member: 'Bierzesz udział w tym wydarzeniu'
-      
+    edit:
+      edit_event: 'Popraw informacje o wydarzeniu'
+
   profile:
     show:
       take_part_event: 'Bierzesz udział w poniższych wydarzeniach:'

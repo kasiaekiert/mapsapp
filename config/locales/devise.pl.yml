@@ -22,7 +22,7 @@ pl:
       unlock_instructions:
         subject: "Instrukcja odblokowania konta"
     omniauth_callbacks:
-      failure: "Logowanie przez konto %{kind} zakończyło się błędem: \"%{reason}\"."
+      failure: 'Logowanie przez konto %{kind} zakończyło się błędem: "%{reason}".'
       success: "Zalogowałeś się pomyślnie przez konto %{kind}."
     passwords:
       no_token: "Dostęp do tej strony jest możliwy jedynie poprzez użycie prawidłowego adresu z emaila z instrukcjami o resecie hasłą. Jeżeli właśnie skorzystałeś z tego adresu, sprawdź czy użyty adres jest zgodny z tym w emailu."
@@ -30,6 +30,11 @@ pl:
       send_paranoid_instructions: "Jeżeli Twój adres istnieje w naszej bazie, otrzymasz za chwilę emaila z instrukcją zmiany hasła."
       updated: "Twoje hasło zostało zmienione. Zostałeś pomyślnie zalogowany."
       updated_not_active: "Twoje hasło zostało zmienione."
+      edit:
+        change_password: "Zmień hasło"
+      new:
+        reset_password_instructions: "Zresetuj moje hasło i wyslij instrukcje na email"
+
     registrations:
       destroyed: "Do widzenia! Twoje konto zostało usunięte."
       signed_up: "Witaj! Zarejestrowałeś się pomyślnie."
@@ -39,24 +44,24 @@ pl:
       update_needs_confirmation: "Konto zostało zaktualizowane. Niemniej jednak przed wprowadzeniem zmian musimy potwierdzić Twój nowy adres email. Za chwilę wyślemy instrukcję na nowy adres."
       updated: "Konto zostało pomyślnie zaktualizowane."
       new:
-        password_new: 'Hasło:'
+        password_new: "Hasło:"
     sessions:
       user:
         signed_in: "Zostałeś zalogowany."
         signed_out: "Zostałeś wylogowany."
       new:
-        login: 'Zaloguj'
-        email_new: 'Email:'
-        password_new: 'Hasło:'
+        login: "Zaloguj"
+        email_new: "Email:"
+        password_new: "Hasło:"
       users:
-        sign_up: 'Zarejstruj się'
+        sign_up: "Zarejstruj się"
         password:
-          new: 'Zapomniałeś hasła?'
+          new: "Zapomniałeś hasła?"
     unlocks:
       send_instructions: "Za chwilę otrzymasz wiadomość email z instrukcją jak odblokować konto."
       send_paranoid_instructions: "Jeżeli Twoje konto istnieje, otrzymasz wiadomość emial z instrukcją jak odblokować konto."
       unlocked: "Twoje konto została pomyślnie odblokowane. Zaloguj się by kontynuować."
-    
+
   errors:
     messages:
       already_confirmed: "już został aktywowany, proszę spróbować się zalogować."

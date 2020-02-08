@@ -2,7 +2,7 @@ namespace :after_party do
   desc 'Deployment task: add_setting_to_all_users'
   task add_setting_to_all_users: :environment do
     puts "Running deploy task 'add_setting_to_all_users'"
-    User.all.each do |user| 
+    User.all.each do |user|
       user.setting || Setting.create(user: user, locale: :en)
     end
 
