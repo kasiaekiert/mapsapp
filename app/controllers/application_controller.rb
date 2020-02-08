@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   around_action :switch_locale
@@ -12,5 +14,10 @@ class ApplicationController < ActionController::Base
 
   def unauthorized
     redirect_to root_url, alert: t('.no_access')
+  end
+
+  def after_sign_in_path_for(user)
+    super
+    events_path
   end
 end
