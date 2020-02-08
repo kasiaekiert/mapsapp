@@ -1,9 +1,9 @@
-<div class="form-group">
+<div class="field">
   <%= place_form.label Place.human_attribute_name("name") %>
-  <%= place_form.text_field(:name, class: "form-control" )%>
+  <%= place_form.text_field :name %>
 </div>
 
-<div class="form-group">
+<div class="field">
   <%= place_form.label Place.human_attribute_name("adres") %>
   <%= place_form.text_field(:address, class: "form-control" )%>
 </div>
