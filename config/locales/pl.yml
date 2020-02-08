@@ -28,9 +28,9 @@ pl:
   controller:
     application-controller:
       alert: 'Nie masz tu dostępu'
-    setting_controller:
-      flash_message:
-        alert-info: 'Twoje ustawienia zostały zaktualizowane.'
+  settings:
+    update:
+      setting_updated: 'Twoje ustawienia zostały zaktualizowane.'
   application_helper:
     alert-info: 'Uwaga błąd!'
 
