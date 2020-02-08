@@ -21,8 +21,8 @@
 
   <p>
     <% if @event.has_member?(current_user) %>
-      <%= t('.you_are_member') %> <br>
-      <%= link_to t('links.delete_me'), event_members_path(@event), class: 'btn btn-info', method: :delete %> <br>
+      <%= t('.you_are_member') %>
+      <%= link_to t('.remove_me_from_event'), event_members_path(@event), method: :delete %>
     <% else %>
       <%= link_to t('links.add_me'), event_members_path(@event), class: 'btn btn-info', method: :post %><br>
     <% end %>
@@ -47,6 +47,7 @@
   <div class="container float-right">
     <% if can? :manage, @event %>
       <%= link_to t('links.edit'), edit_event_path(@event) %> |
+      <%= link_to t('links.delete'), @event, method: :delete, class: 'btn btn-danger' %>
     <% end %>
       <%= link_to t('links.back'), events_path %> |
       <%= link_to t('links.show_me_places'), places_path %>

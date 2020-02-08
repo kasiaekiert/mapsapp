@@ -11,7 +11,7 @@ class SettingsController < ApplicationController
         format.json { render json: @setting.errors, status: :unprocessable_entity }
       end
     end
-  end 
+  end
 
   private
 

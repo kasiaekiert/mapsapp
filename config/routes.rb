@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
   resources :places
   resources :events do
-    resource :members, only: [:create, :destroy]
+    resources :members, only: %i[create destroy]
+    resources :profile, only: [:delete]
   end
   resources :settings, only: [:update]
 

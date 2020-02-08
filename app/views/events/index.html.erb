@@ -26,14 +26,19 @@
           <td>
             <% if event.has_member?(current_user) %>
               <%= t('.you_are_member') %>
-              <%= link_to t('links.delete_me'), event_members_path(event), class: 'btn btn-info', method: :delete %>
+              <%= link_to t('links.delete_me'), event_members_path(event), class: 'btn btn-info', method: :destroy %>
             <% else %>
               <%= link_to t('links.add_me'), event_members_path(event), class: 'btn btn-info', method: :post %>
             <% end %>
           </td>
           <td>
             <% if can? :manage, event %>
-              <%= link_to t('links.destroy'), event, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to t('links.destroy'), event, method: :delete, data: 
+                if event.members
+                  { confirm: 'There are some members in your event. Are you sure that you want to remove it?' }
+                else
+                  { confirm: 'Are you sure?' }
+                end %>
             <% end %>
           </td>
         </tr>

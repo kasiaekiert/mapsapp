@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   before_action :check_authorization, only: [:edit, :update, :destroy]
-
+  
   def index
     @events = Event.includes(:members).sort_by_start_time
   end
@@ -54,12 +54,22 @@ class EventsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_event
       @event = Event.find(params[:id])
-    end 
+    end
 
     def check_authorization
       authorize! :manage, @event
     end
 
+<<<<<<< HEAD
+=======
+    def notice_before_remove(event)
+      if @event.has_member?
+        flash[:notice] = 'There are some members in your event. Are you sure that you want to remove it?'
+      else
+        flash[:notice] = 'Are you sure?'
+      end
+    end
+>>>>>>> 2d1d47dc28e12e5844a403f00cd2639ed29c4626
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
       params.require(:event).permit(:name, :started_at, :duration, :place_id, place_attributes: [:name, :address])
