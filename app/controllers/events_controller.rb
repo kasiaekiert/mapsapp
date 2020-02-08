@@ -3,7 +3,7 @@ class EventsController < ApplicationController
   before_action :check_authorization, only: [:edit, :update, :destroy]
   
   def index
-    @events = Event.sort_by_start_time
+    @events = Event.includes(:members).sort_by_start_time
   end
 
   def show
@@ -30,8 +30,9 @@ class EventsController < ApplicationController
   end
 
   def update
+    place_attributes = event_params[:place_attributes].merge(user_id: current_user.id)
     respond_to do |format|
-      if @event.update(event_params)
+      if @event.update(event_params.merge(place_attributes: place_attributes))
         format.html { redirect_to @event, notice: t('.event_update') }
         format.json { render :show, status: :ok, location: @event }
       else

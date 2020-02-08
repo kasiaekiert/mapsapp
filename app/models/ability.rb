@@ -8,6 +8,6 @@ class Ability
     can :manage, Event, user_id: user.id
   end
 
-    # See the wiki for details:
-    # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
+  # See the wiki for details:
+  # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
 end
