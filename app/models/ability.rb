@@ -8,5 +8,8 @@ class Ability
     can :manage, Event, user_id: user.id
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
+
+    can :delete, Place, user_id: user.id
+    can :manage, Place, user_id: user.id
   end
 end
