@@ -15,8 +15,8 @@
 
     <%= render 'input_fields', place_form: form %>
 
-    <div>
-      <button type="submit" class="btn btn-primary mb-2"><%= t(".submit")%></button>
+    <div class="actions">
+      <%= form.submit class: "btn btn-primary mb-2" %>
     </div>
   <% end %>
 </div>

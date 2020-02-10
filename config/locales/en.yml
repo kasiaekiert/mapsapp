@@ -28,9 +28,9 @@ en:
   controller:
     application-controller:
       alert: 'You have no access here'
-    setting_controller:
-      flash_message:
-        alert-info: 'Your setting was successfully updated.'
+  settings:
+    update:
+      setting_updated: 'Your setting was successfully updated.'
   application_helper:
     alert-info: 'Error!'
 

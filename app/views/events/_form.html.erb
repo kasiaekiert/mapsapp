@@ -2,11 +2,10 @@
   <% if event.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(event.errors.count, t('.error')) %> <%= t('.prohibited_event') %></h2>
-
       <ul>
-      <% event.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% event.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -29,7 +28,7 @@
   <% if event.new_record?%>
     <div class="field">
       <%= form.label :place %>
-      <%= form.select :place_id, options_from_collection_for_select(places, :id, :full_adress)%>
+      <%= form.select :place_id, options_from_collection_for_select(places, :id, :full_adress) %>
     </div>
   <% else %>
     <%= form.fields_for :place_attributes, event.place do |place_form| %>
