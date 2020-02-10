@@ -52,11 +52,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # The path used after sign up.
-  
-  # def after_sign_in_path_for(_resource)
-  #   raise 'work'
-  #   # redirect_to events_path
-  #   super(events_path)
+  # def after_sign_in_path_for(resource)
+  #  super(resource)
   # end
 
   # The path used after sign up for inactive accounts.

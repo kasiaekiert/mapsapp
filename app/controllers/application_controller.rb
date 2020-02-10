@@ -15,9 +15,4 @@ class ApplicationController < ActionController::Base
   def unauthorized
     redirect_to root_url, alert: t('.no_access')
   end
-
-  def after_sign_in_path_for(user)
-    super
-    events_path
-  end
 end
