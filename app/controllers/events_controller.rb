@@ -1,20 +1,20 @@
+# frozen_string_literal: true
+
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
-  before_action :check_authorization, only: [:edit, :update, :destroy]
+  before_action :set_event, only: %i[show edit update destroy]
+  before_action :check_authorization, only: %i[edit update destroy]
 
   def index
-    @events = Event.includes(:members).sort_by_start_time
+    @events = Event.sort_by_start_time
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @event = Event.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @event = Event.new(event_params.merge(user_id: current_user.id))
@@ -51,17 +51,18 @@ class EventsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_event
-      @event = Event.find(params[:id])
-    end 
 
-    def check_authorization
-      authorize! :manage, @event
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_event
+    @event = Event.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def event_params
-      params.require(:event).permit(:name, :started_at, :duration, :place_id, place_attributes: [:name, :address])
-    end
+  def check_authorization
+    authorize! :manage, @event
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def event_params
+    params.require(:event).permit(:name, :started_at, :duration, :place_id, place_attributes: %i[name address])
+  end
 end

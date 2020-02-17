@@ -11,7 +11,7 @@ class Event < ApplicationRecord
   validates :started_at, :duration, presence: true
 
   def has_member?(user)
-    members.include?(user)
+    member_ids.include?(user.id)
   end
 
   def status
