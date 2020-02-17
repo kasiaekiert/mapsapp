@@ -20,14 +20,13 @@ RSpec.describe Event, type: :model do
     end
   end
 
-  context '#sort_by' do
+  context '.sort_by_start_time' do
     it 'should have the right events in the right order' do
-      @event1 = Event.create(name: 'Event1', started_at: Time.current + 7.weeks, duration: 1)
-      @event2 = Event.create(name: 'Event2', started_at: Time.current, duration: 1)
-      expect(Event.all).to contain_exactly(@event2, @event1)
-      # (Event.where(started_at: 'admin').to_a
-      # expect([@event1, @event2]).to start_with(@event2)
-      # Event.all.sort_by_started_at.expect.start(@event2, @event1)
+      user = User.create(email: 'user23@user23.com', password: 'user23@user23.com', password_confirmation: 'user23@user23.com')
+      place = Place.create(name: 'Lesna droga', address: 'Lesna sciezka 123', creator: user)
+      @event1 = Event.create(name: 'Event1', started_at: Time.current + 7.weeks, duration: 1, user: user, place: place)
+      @event2 = Event.create(name: 'Event2', started_at: Time.current, duration: 1, user: user, place: place)
+      expect(Event.sort_by_start_time).to contain_exactly(@event2, @event1)
     end
   end
 end
