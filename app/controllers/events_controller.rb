@@ -17,7 +17,7 @@ class EventsController < ApplicationController
   def edit; end
 
   def create
-    @event = Event.new(event_params.merge(user_id: current_user.id))
+    @event = Event.new(create_event_params.merge(user_id: current_user.id))
     respond_to do |format|
       if @event.save
         format.html { redirect_to @event, notice: t('.event_success') }
@@ -30,9 +30,9 @@ class EventsController < ApplicationController
   end
 
   def update
-    place_attributes = event_params[:place_attributes].merge(user_id: current_user.id)
+    place_attributes = update_event_params[:place_attributes].merge(user_id: current_user.id)
     respond_to do |format|
-      if @event.update(event_params.merge(place_attributes: place_attributes))
+      if @event.update(update_event_params.merge(place_attributes: place_attributes))
         format.html { redirect_to @event, notice: t('.event_update') }
         format.json { render :show, status: :ok, location: @event }
       else
@@ -62,7 +62,11 @@ class EventsController < ApplicationController
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def event_params
-    params.require(:event).permit(:name, :started_at, :duration, :place_id, place_attributes: %i[name address])
+  def create_event_params
+    params.require(:event).permit(:name, :started_at, :duration, :place_id)
+  end
+
+  def update_event_params
+    params.require(:event).permit(:name, :started_at, :duration, place_attributes: %i[name address])
   end
 end
