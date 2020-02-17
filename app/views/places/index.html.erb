@@ -16,8 +16,10 @@
         <h2><%= place.name %></h2>
         <p><%= place.address %></p>
         <p><%= link_to t('links.show'), place_path(place), class: "btn btn-secondary btn-xs" %></p>
-        <p><%= link_to t('links.edit'), edit_place_path(place) %></p>
-        <p><%= link_to t('links.destroy'), place, method: :delete, data: { confirm: t('.sure') } %></p>
+        <% if can? :manage, place %>
+          <p><%= link_to t('links.edit'), edit_place_path(place) %></p>
+          <p><%= link_to t('links.destroy'), place_path(place), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <% end %>
       </div>
     <% end %>
     <br>
@@ -27,7 +29,7 @@
 
 <div class= "container">
   <br>
-  <%= link_to t('.showevents'), events_path, class: "btn btn-secondary btn-lg btn-block" %></td>
+  <%= link_to t('.showevents'), events_path, class: "btn btn-secondary btn-lg btn-block" %>
   <br>
 </div>
 <div class="front-page-map">
