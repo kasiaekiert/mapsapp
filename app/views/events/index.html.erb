@@ -17,7 +17,7 @@
           <td><%= event.name %></td>
           <td><%= event.duration %></td>
           <td><%= event.started_at %></td>
-          <td><span class="badge badge-secondary"><%= t("statuses.#{event.status}") %></span></td>
+          <td><%= event_status(event) %></td>
           <td><%= link_to t('links.show'), event %></td>
           <td>
             <% if can? :manage, event %>
