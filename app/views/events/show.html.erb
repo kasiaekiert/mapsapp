@@ -1,18 +1,7 @@
 <div class="container">
   <p>
     <strong><%= Event.human_attribute_name(:status) %></strong>
-    <span class="badge badge-<%=
-      if t("statuses.#{@event.status}") == t("statuses.incomming")
-        'primary'
-      elsif t("statuses.#{@event.status}") == t("statuses.in_progress")
-        'info'
-      else
-        'secondary'
-      end %>" >
-      <%= t("statuses.#{@event.status}") %>
-    </span>
-
-
+    <%= event_status(@event) %>
   </p>
 
   <p>
