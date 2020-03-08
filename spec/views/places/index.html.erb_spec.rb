@@ -22,7 +22,6 @@ RSpec.describe 'places/index', type: :view do
 
   it 'renders a list of places' do
     render
-    assert_select 'div.container>div.row>div.col-md-4', text: 'Name'.to_s, count: 2
-    assert_select 'tr>td', text: 'MyText'.to_s, count: 2
+    assert_select 'div.container>div.row>div.col-md-4>h2', text: 'Name'.to_s, count: 2
   end
 end

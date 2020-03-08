@@ -94,6 +94,8 @@ GEM
     erubi (1.8.0)
     erubis (2.7.0)
     execjs (2.7.0)
+    factory_bot (4.11.1)
+      activesupport (>= 3.0.0)
     ffi (1.11.1)
     flay (2.12.0)
       erubis (~> 2.7.0)
@@ -307,6 +309,7 @@ DEPENDENCIES
   cancancan
   coffee-rails (~> 4.2)
   devise
+  factory_bot (~> 4.8, >= 4.8.2)
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
