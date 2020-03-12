@@ -116,3 +116,7 @@ en:
       take_part_event: 'You take part in:'
       created_events: 'You created these events:'
       save_changes: 'Save my change'
+      
+  settings:
+    update:
+      alert-info: 'Setting was updated'
